@@ -13,7 +13,7 @@ class Settings(BaseSettings):
     REDIS_PASSWORD: str = ""
     REDIS_USERNAME: str = ""
     DOC_DIR: str = "input-dir"
-    OLLAMA_HOST: str = "172.17.0.1"
+    OLLAMA_HOST: str = "localhost"
     OLLAMA_PORT: int = 11434
     OLLAMA_LLM_MODEL: str = "deepseek-r1:14b"
     OLLAMA_EMBED_MODEL: str = "bge-m3"

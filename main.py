@@ -69,7 +69,7 @@ def create_redis_index(documents):
 
 # setup llm & embedding model
 llm=Ollama(model=config.OLLAMA_LLM_MODEL, base_url=f"http://{config.OLLAMA_HOST}:{config.OLLAMA_PORT}", 
-           request_timeout=300.0)
+           request_timeout=600.0)
 Settings.llm = llm
 # embed_model = HuggingFaceEmbedding( model_name="BAAI/bge-large-en-v1.5", trust_remote_code=True)
 embed_model = OllamaEmbedding(model_name=config.OLLAMA_EMBED_MODEL, 
@@ -123,7 +123,7 @@ graph_store = Neo4jGraphStore(
     password=password,
     url=uri,
     database="neo4j",
-    timeout=300.0
+    timeout=600.0
 )
 
 storage_context = StorageContext.from_defaults(graph_store=graph_store)
