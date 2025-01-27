@@ -132,7 +132,7 @@ storage_context = StorageContext.from_defaults(graph_store=graph_store)
 kg_index = KnowledgeGraphIndex.from_documents(
     docs,
     storage_context=storage_context,
-    max_triplets_per_chunk=2,
+    max_triplets_per_chunk=8,
     embed_model=embed_model,
     show_progress=True
 )
