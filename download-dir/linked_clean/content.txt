@@ -1,0 +1,52 @@
+Response Times: Rough Guide
+Show TOC
+Response Times: Rough Guide
+Definition
+The following times provide you with an overview of the optimal response times in your SAP system. You can display the current
+workload overview
+for your system with the workload monitor.
+Proportions of the Response Time
+Performance Data
+Time
+Average response time
+Around 1 second (dialog), < 1 second (update)
+Average CPU time
+Around 40% of the average response time
+Average wait time
+< 1% of the average response time
+Average load time
+< 10% of the average response time
+Average database time per dialog step
+Around 40% of the average response time
+Note
+The operating system can affect these values by up to around 10%.
+The ratio of the CPU time to the total time should not fall under 5%. A smaller proportion could mean that there is an input/output bottleneck or that a database overload has caused long wait times.
+The average response times for dialog transactions (online transactions) should not be more than a second, since a higher value would strain the patience of the user too much.
+Times for Database Access
+Database Access
+Time
+Direct read
+< 10 ms
+Sequential read
+< 40 ms
+Changes
+> 25 ms
+Possible Causes of Bad Response Times
+High Value For
+Possible Causes
+DB request (Change/Comm.)
+Problems with database or index
+Load time
+Buffer too small
+Transports to the productive system
+Wait time
+Insufficient work processes
+Inactive update
+Incorrect operation mode
+Locked tasks
+Long-running transactions
+Note
+In a database system that is functioning properly, the times for direct reads and changes should not be more than 10 milliseconds.
+The time for sequential reads should not be more than 30-40 milliseconds.
+Workload Monitor
+start page

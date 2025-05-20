@@ -1,0 +1,157 @@
+Veeam Plugin for SAP HANA: Confidently Backup Your Data
+Veeam’s guidance for customers affected by CrowdStrike’s content update
+Read More
+Veeam Data Platform
+Backup & Recovery
+SAP HANA Backup & Recovery
+Veeam Data Platform
+Confidently Backup Your Valuable SAP HANA Data
+Achieve transactionally consistent SAP-certified backups
+Download Trial
+Free, full functionality for 30 days
+Request a demo
+Download Trial
+Benefits
+SAP HANA Protection You Can Count On
+Transform SAP HANA data protection with Veeam-powered, SAP-certified backup and recovery. Seamlessly integrate with Veeam Backup & Replication and empower your SAP administrators to efficiently back up their critical and performance-sensitive SAP HANA environments.
+Release Notes
+System Requirements
+Broad SAP-Certified Protection
+Support for SAP S/4 HANA, SAP BW Data Warehouse and SAP Business ONE.
+Enterprise Scale
+Protect multiple instances of SAP HANA, either on-premises or in the cloud.
+Reduce Complexity
+Leverage existing native or Veeam-driven workflows.
+Capabilities
+Scalable SAP HANA Protection
+Native Backup Integration
+Seamlessly integrate with SAP HANA Backint processing to forward backups to Veeam backup targets.
+Intuitive Management
+Use native and existing SAP workflows and monitor your SAP backups along with your other workloads.
+Intelligent Recovery
+Leverage SAP expertise in recovery using SAP HANA Cockpit, SAP HANA Studio or HDBSQL.
+Latest release
+Veeam Data Platform
+Powerful data resilience
+Learn more
+Integrity for your identity
+Resilience for your critical assets
+Evolution for your enterprise
+Platform Editions
+True Data Resilience
+Available in three comprehensive enterprise-grade editions — our most powerful premium option delivers the complete, secure protection and best-in-class orchestration that can only be achieved with Veeam Data Platform.
+Secure Foundation
+Foundation
+Cyber Resilience
+Advanced
+Enterprise Resilience
+Premium
+Veeam Backup & Replication​
+Veeam Backup & Replication
+Veeam ONE
+Veeam Backup & Replication
+Veeam ONE
+Veeam Recovery Orchestrator
+Zero Trust Data Resilience​
+AI Guidance​
+Detect + Identify Threats
+Security & Observability
+Gen AI insights
+Recovery Orchestration &  Compliance​
+Threat Assessment
+Add On
+Veeam Data Cloud Vault
+Add On
+Veeam Data Cloud Vault
+Add On
+Veeam Data Cloud Vault
+Cyber Secure Program
+Secure Data Storage
+Pre, During and Post Incident Response
+Feature Comparison
+Customer Review
+Save $45,000 in IT operating costs annually
+Veeam supports our goal to become one of the largest steelmakers in the world by protecting SAP S/4HANA so it’s always available for steel manufacturing.
+Mr. Phan Ngoc Lam
+Head of the IT Department
+Hoa Phat Group
+Read Full Story
+RESOURCES
+Documentation
+Backup & Recovery - What's New
+User Guide
+Release Notes
+System Requirements
+FAQs
+Can Veeam handle SAP HANA in multi-cloud environments?
+Yes, Veeam's SAP HANA plug-in is designed to protect SAP HANA instances across on-premises, hybrid and multi-cloud environments. This provides flexibility and scalability for your data protection needs.
+Does Veeam support point-in-time recovery for SAP HANA?
+Yes, Veeam's SAP HANA plug-in allows you to perform point-in-time recovery using SAP HANA Cockpit, SAP HANA Studio or HDBSQL. This capability ensures that you can restore your data to the desired state quickly and efficiently.
+How does Veeam ensure secure data transfer during SAP HANA backups?
+Veeam uses encryption features both in transit and at rest to ensure the security of your SAP HANA data during backup and recovery processes. Additionally, Veeam's role-based access control (RBAC) helps prevent unauthorized access to your data.
+Radical Resilience is
+Our Difference
+With Veeam by your side, you have the flexibility you want for today’s
+hybrid cloud and the confidence you need for long-term success.
+Contact Us
+Get help selecting the right solution for your organization
+Get started
+Technical Support
+Find answers to your questions with Veeam’s technical documentation
+Request
+Veeam R&D Forums
+Get help for your Veeam products and software
+Visit Forums
+Request Custom Demo
+First name
+Last name
+Business email
+Country
+Phone
+Company
+Veeam Data Platform Premium
+Backup & Recovery
+Monitoring & Analytics
+Recovery Orchestration
+For Microsoft 365
+For Entra ID
+For Salesforce
+For Microsoft Azure
+Vault Cloud Storage
+Backup  <i>for Microsoft 365</i>
+Backup <i>for Microsoft Entra ID</i>
+Backup  <i>for Salesforce</i>
+Backup  <i>for AWS</i>
+Backup  <i>for Microsoft Azure</i>
+Backup <i>for Google Cloud</i>
+Backup  <i>for Kubernetes</i>
+Veeam Data Platform Essentials
+Service Provider Console
+Veeam Cloud Connect
+Product
+Yes, I want to receive information about Veeam products and events. I can unsubscribe at any time.
+By submitting, you are agreeing to have your personal information managed in accordance with the terms of Veeam's
+Privacy Notice
+.
+By submitting, you are agreeing to receive information about Veeam products and events and to have your personal information managed in accordance with the terms of Veeam's
+Privacy Notice
+.
+SUBMIT DEMO REQUEST
+Verify your email to continue your product download
+We've sent a verification code to:
+Verify
+Incorrect verification code. Please try again.
+An email with a verification code was just sent to
+Didn't receive the code? Click to resend in
+sec
+Didn't receive the code?
+Click to resend
+Start using Veeam:
+Download the product
+&
+Activate the license key
+Thank you!
+We have received your request and our team will reach out to you shortly.
+OK
+Oops! Something went wrong.
+Please, try again later.

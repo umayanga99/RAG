@@ -1,0 +1,185 @@
+Intel® Xeon® Platinum 8380 Processor
+Skip To Main Content
+The browser version you are using is not recommended for this site.
+Please consider upgrading to the latest version of your browser by clicking one of the following links.
+Safari
+Chrome
+Edge
+Firefox
+Intel® Xeon® Platinum 8380 Processor
+60M Cache, 2.30 GHz
+Intel® Xeon® Platinum 8380 Processor
+60M Cache, 2.30 GHz
+Add To Compare
+Discover newer Intel Processors and experience Improved performance
+0
+Retailers
+×
+Sorry we are not able to load the pricing info at this moment.
+Specifications
+Ordering & Compliance
+Compatible Products
+Downloads
+Support
+Compare Intel® Products
+Download Specifications
+Essentials
+Download Specifications
+Product Collection
+3rd Gen Intel® Xeon® Scalable Processors
+Code Name
+Products formerly Ice Lake
+Vertical Segment
+Server
+Processor Number
+8380
+Lithography
+10 nm
+Recommended Customer Price
+$9359.00
+CPU Specifications
+Total Cores
+40
+Total Threads
+80
+Max Turbo Frequency
+3.40 GHz
+Processor Base Frequency
+2.30 GHz
+Cache
+60 MB
+Intel® UPI Speed
+11.2 GT/s
+Max # of UPI Links
+3
+TDP
+270 W
+Supplemental Information
+Marketing Status
+Launched
+Launch Date
+Q2'21
+Servicing Status
+Baseline Servicing
+Embedded Options Available
+No
+Memory Specifications
+Max Memory Size (dependent on memory type)
+6 TB
+Memory Types
+DDR4-3200
+Maximum Memory Speed
+3200 MHz
+Max # of Memory Channels
+8
+Intel® Optane™ Persistent Memory Supported
+Yes
+ECC Memory Supported
+‡
+Yes
+Expansion Options
+Scalability
+2S
+PCI Express Revision
+4.0
+Max # of PCI Express Lanes
+64
+Package Specifications
+Sockets Supported
+FCLGA4189
+T
+CASE
+83°C
+Package Size
+77.5mm x 56.5mm
+Advanced Technologies
+Intel® Volume Management Device (VMD)
+Yes
+Intel® Speed Select Technology – Core Power
+Yes
+Intel® Speed Select Technology – Turbo Frequency
+Yes
+Intel® Deep Learning Boost (Intel® DL Boost) on CPU
+Yes
+Intel® Speed Select Technology - Base Frequency
+Yes
+High Priority Cores
+16
+High Priority Core Frequency
+2.40 GHz
+Low Priority Cores
+24
+Low Priority Core Frequency
+2.20 GHz
+Intel® Resource Director Technology (Intel® RDT)
+Yes
+Intel® Speed Shift Technology
+Yes
+Intel® Turbo Boost Technology
+‡
+2.0
+Intel® Hyper-Threading Technology
+‡
+Yes
+Intel® Transactional Synchronization Extensions
+Yes
+Intel® 64
+‡
+Yes
+Instruction Set Extensions
+Intel® SSE4.2, Intel® AVX, Intel® AVX2, Intel® AVX-512
+# of AVX-512 FMA Units
+2
+Security & Reliability
+Intel® Software Guard Extensions (Intel® SGX)
+Yes with Intel® SPS
+Default Maximum Enclave Page Cache (EPC) Size for Intel® SGX
+512 GB
+Intel® Crypto Acceleration
+Yes
+Intel® Platform Firmware Resilience Support
+Yes
+Intel® Total Memory Encryption
+Yes
+Intel® AES New Instructions
+Yes
+Intel® Trusted Execution Technology
+‡
+Yes
+Execute Disable Bit
+‡
+Yes
+Intel® Run Sure Technology
+Yes
+Mode-based Execute Control (MBEC)
+Yes
+Intel® Virtualization Technology (VT-x)
+‡
+Yes
+Intel® Virtualization Technology for Directed I/O (VT-d)
+‡
+Yes
+Intel® VT-x with Extended Page Tables (EPT)
+‡
+Yes
+All information provided is subject to change at any time, without notice. Intel may make changes to manufacturing life cycle, specifications, and product descriptions at any time, without notice. The information herein is provided "as-is" and Intel does not make any representations or warranties whatsoever regarding accuracy of the information, nor on the product features, availability, functionality, or compatibility of the products listed. Please contact system vendor for more information on specific products or systems.
+Intel classifications are for general, educational and planning purposes only and consist of Export Control Classification Numbers (ECCN) and Harmonized Tariff Schedule (HTS) numbers. Any use made of Intel classifications are without recourse to Intel and shall not be construed as a representation or warranty regarding the proper ECCN or HTS. Your company as an importer and/or exporter is responsible for determining the correct classification of your transaction.
+Refer to Datasheet for formal definitions of product properties and features.
+‡
+This feature may not be available on all computing systems. Please check with the system vendor to determine if your system delivers this feature, or reference the system specifications (motherboard, processor, chipset, power supply, HDD, graphics controller, memory, BIOS, drivers, virtual machine monitor-VMM, platform software, and/or operating system) for feature compatibility. Functionality, performance, and other benefits of this feature may vary depending on system configuration.
+Intel processor numbers are not a measure of performance. Processor numbers differentiate features within each processor family, not across different processor families. See
+http://www.intel.com/content/www/us/en/processors/processor-numbers.html
+for details.
+Recommended Customer Price (RCP) is pricing guidance only for Intel products. Prices are for direct Intel customers, usually represent 1,000-unit purchase quantities, and are subject to change without notice. Prices may vary for other package types and shipment quantities. In bulk, price represents individual unit. Listing of RCP does not constitute a formal pricing offer from Intel.
+System and Maximum TDP is based on worst case scenarios.  Actual TDP may be lower if not all I/Os for chipsets are used.
+“Announced” SKUs are not yet available. Please refer to the Launch Date for market availability.
+Max Turbo Frequency refers to the maximum single-core processor frequency that can be achieved with Intel® Turbo Boost Technology. See
+https://www.intel.com/content/www/us/en/gaming/resources/turbo-boost.html
+for more information and applicability of this technology.
+See
+http://www.intel.com/content/www/us/en/architecture-and-technology/hyper-threading/hyper-threading-technology.html?wapkw=hyper+threading
+for more information including details on which processors support Intel® HT Technology.
+Processors that support 64-bit computing on Intel® architecture require an Intel 64 architecture-enabled BIOS.
+Some products can support AES New Instructions with a Processor Configuration update, in particular, i7-2630QM/i7-2635QM, i7-2670QM/i7-2675QM, i5-2430M/i5-2435M, i5-2410M/i5-2415M.  Please contact OEM for the BIOS that includes the latest Processor configuration update.
+Compare Products
+Get Help
