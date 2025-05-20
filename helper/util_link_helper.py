@@ -82,7 +82,7 @@ def update_link_status(uri, user, pwd):
 
 # 4. download publicly accessible documents
 def fetch_public_docs(uri, user, pwd, raw_dir: pathlib.Path):
-    raw_dir.mkdir(exist_ok=True)
+    raw_dir.mkdir(parents=True,exist_ok=True)
     driver = GraphDatabase.driver(uri, auth=(user, pwd))
     with driver.session(database="neo4j") as s:
         q = """
