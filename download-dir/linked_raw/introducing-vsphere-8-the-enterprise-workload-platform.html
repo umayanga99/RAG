@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link class="user" href="https://www.vmware.com/content/dam/vmwaredesigns/scrapercontent/responsive.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" type="image/x-icon" href="https://blogs.vmware.com/vsphere/wp-content/themes/vmware-blog-1.9.8/favicon.ico" />
+  <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+	<!-- This site is optimized with the Yoast SEO Premium plugin v24.6 (Yoast SEO v24.7) - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Introducing vSphere 8: The Enterprise Workload Platform</title>
+	<meta name="description" content="VMware vSphere 8 brings the benefits of cloud to on-premises workloads, supercharges performance, and accelerates innovation." />
+	<link rel="canonical" href="https://blogs.vmware.com/vsphere/2022/08/introducing-vsphere-8-the-enterprise-workload-platform.html" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Introducing vSphere 8: The Enterprise Workload Platform" />
+	<meta property="og:description" content="VMware vSphere 8 brings the benefits of cloud to on-premises workloads, supercharges performance, and accelerates innovation." />
+	<meta property="og:url" content="https://blogs.vmware.com/vsphere/2022/08/introducing-vsphere-8-the-enterprise-workload-platform.html" />
+	<meta property="og:site_name" content="VMware vSphere Blog" />
+	<meta property="article:published_time" content="2022-08-30T12:00:05+00:00" />
+	<meta property="article:modified_time" content="2022-09-12T18:34:36+00:00" />
+	<meta property="og:image" content="https://blogs.vmware.com/wp-content/uploads/sites/72/2022/08/VMware-vSphere8-GeneralAnnouncement.png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="675" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="author" content="Himanshu Singh" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@himanshuks" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Himanshu Singh" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="12 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://blogs.vmware.com/vsphere/2022/08/introducing-vsphere-8-the-enterprise-workload-platform.html","url":"https://blogs.vmware.com/vsphere/2022/08/introducing-vsphere-8-the-enterprise-workload-platform.html","name":"Introducing vSphere 8: The Enterprise Workload Platform","isPartOf":{"@id":"https://blogs.vmware.com/vsphere/#website"},"primaryImageOfPage":{"@id":"https://blogs.vmware.com/vsphere/2022/08/introducing-vsphere-8-the-enterprise-workload-platform.html#primaryimage"},"image":{"@id":"https://blogs.vmware.com/vsphere/2022/08/introducing-vsphere-8-the-enterprise-workload-platform.html#primaryimage"},"thumbnailUrl":"https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/2021-vSphere-Family-Icon-576x324-1.png","datePublished":"2022-08-30T12:00:05+00:00","dateModified":"2022-09-12T18:34:36+00:00","author":{"@id":"https://blogs.vmware.com/vsphere/#/schema/person/38cea692fc3d04a5f2173e443f023c5c"},"description":"VMware vSphere 8 brings the benefits of cloud to on-premises workloads, supercharges performance, and accelerates innovation.","breadcrumb":{"@id":"https://blogs.vmware.com/vsphere/2022/08/introducing-vsphere-8-the-enterprise-workload-platform.html#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://blogs.vmware.com/vsphere/2022/08/introducing-vsphere-8-the-enterprise-workload-platform.html"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://blogs.vmware.com/vsphere/2022/08/introducing-vsphere-8-the-enterprise-workload-platform.html#primaryimage","url":"https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/2021-vSphere-Family-Icon-576x324-1.png","contentUrl":"https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/2021-vSphere-Family-Icon-576x324-1.png","width":576,"height":324},{"@type":"BreadcrumbList","@id":"https://blogs.vmware.com/vsphere/2022/08/introducing-vsphere-8-the-enterprise-workload-platform.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://blogs.vmware.com/vsphere/"},{"@type":"ListItem","position":2,"name":"Introducing vSphere 8: The Enterprise Workload Platform"}]},{"@type":"WebSite","@id":"https://blogs.vmware.com/vsphere/#website","url":"https://blogs.vmware.com/vsphere/","name":"VMware vSphere Blog","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://blogs.vmware.com/vsphere/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Person","@id":"https://blogs.vmware.com/vsphere/#/schema/person/38cea692fc3d04a5f2173e443f023c5c","name":"Himanshu Singh","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://blogs.vmware.com/vsphere/#/schema/person/image/","url":"http://blogs.vmware.com/wp-content/uploads/sites/74/2016/07/Himanshu-Singh_avatar_1467917420-96x96.jpg","contentUrl":"http://blogs.vmware.com/wp-content/uploads/sites/74/2016/07/Himanshu-Singh_avatar_1467917420-96x96.jpg","caption":"Himanshu Singh"},"description":"Himanshu Singh is Director of Product Marketing for Compute, Kubernetes and AI, in Broadcom's VCF Division. His team is responsible for private AI, Kubernetes in VCF, modern workloads, and the vSphere compute virtualization platform (ESX, vCenter). Previously, he drove cloud management solutions at VMware, grew the Azure public cloud business at Microsoft, and managed private clouds for large enterprise customers at IBM. Himanshu is recognized as a Distinguished Speaker at VMware Explore, and has been a frequent speaker at other industry conferences by Gartner, Dell, vForum, VMUG, Microsoft, etc. He holds a B.Eng. (Hons.) degree from Nanyang Technological University, Singapore, and an MBA from Tuck School of Business at Dartmouth College. You can follow him on X as @himanshuks, as well as on LinkedIn.","sameAs":["http://www.vsphere.com","https://www.linkedin.com/in/himanshuks/","https://x.com/himanshuks"],"jobTitle":"Director, Product Marketing","worksFor":"Broadcom, Inc.","url":"https://blogs.vmware.com/vsphere/author/himanshu_singh"}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//cdn.parsely.com' />
+<link rel='dns-prefetch' href='//stats.wp.com' />
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/blogs.vmware.com\/vsphere\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.1"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\ud83d\udd25","\ud83d\udc26\u200b\ud83d\udd25")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<link rel='stylesheet' id='all-css-0' href='https://blogs.vmware.com/vsphere/wp-content/plugins/crayon-syntax-highlighter/css/min/crayon.min.css?m=1745601867g' type='text/css' media='all' />
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='all-css-2' href='https://blogs.vmware.com/vsphere/wp-includes/css/dist/block-library/style.min.css?m=1746040294g' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<link rel='stylesheet' id='all-css-4' href='https://blogs.vmware.com/vsphere/wp-content/plugins/widget-countdown/includes/gutenberg/style.css?m=1745601868g' type='text/css' media='all' />
+<style id='wp-parsely-recommendations-style-inline-css'>
+.parsely-recommendations-list-title{font-size:1.2em}.parsely-recommendations-list{list-style:none;padding:unset}.parsely-recommendations-cardbody{overflow:hidden;padding:.8em;text-overflow:ellipsis;white-space:nowrap}.parsely-recommendations-cardmedia{padding:.8em .8em 0}
+
+</style>
+<link rel='stylesheet' id='all-css-8' href='https://blogs.vmware.com/vsphere/_static/??-eJzTLy/QzcxLzilNSS3WzyrWz01NyUxMzUnNTc0rQeEU5CRWphbp5qSmJyZX6uVm5uklFxfr6OPTDpRD5sM02efaGpqbmBmYGBhZmgIARK0u4Q==' type='text/css' media='all' />
+<style id='jetpack-sharing-buttons-style-inline-css'>
+.jetpack-sharing-buttons__services-list{display:flex;flex-direction:row;flex-wrap:wrap;gap:0;list-style-type:none;margin:5px;padding:0}.jetpack-sharing-buttons__services-list.has-small-icon-size{font-size:12px}.jetpack-sharing-buttons__services-list.has-normal-icon-size{font-size:16px}.jetpack-sharing-buttons__services-list.has-large-icon-size{font-size:24px}.jetpack-sharing-buttons__services-list.has-huge-icon-size{font-size:36px}@media print{.jetpack-sharing-buttons__services-list{display:none!important}}.editor-styles-wrapper .wp-block-jetpack-sharing-buttons{gap:0;padding-inline-start:0}ul.jetpack-sharing-buttons__services-list.has-background{padding:1.25em 2.375em}
+</style>
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='all-css-12' href='https://blogs.vmware.com/vsphere/_static/??-eJx1kMtSwzAMRX8IRU3pIywYPoVxbCXx1LJTSyb073E7KRvITq975uriMoNNUSkqzqGMPgr2pEoZbPD2AppAFyJFI0IqaEVQ9BZImlq+4D/6FElzEYUvXkwm4PJQjZ/PxaayBPVslKDuroXyDYRMthMMPlRLqBMxCToaTD3dxDz6by0mQKZQeQ7mJKv5nEp0daJT4V4a9nGTw3QREDZZwRSdUobFu7Fm8RvCH+nqcP28D2mEtnlrOnRedA0O2fgIdNp3dnDD4fUO+eD39nw4nnZtd97/ACNxl1E=' type='text/css' media='all' />
+<style id='crp-style-rounded-thumbs-inline-css'>
+
+			.crp_related.crp-rounded-thumbs a {
+				width: 150px;
+                height: 150px;
+				text-decoration: none;
+			}
+			.crp_related.crp-rounded-thumbs img {
+				max-width: 150px;
+				margin: auto;
+			}
+			.crp_related.crp-rounded-thumbs .crp_title {
+				width: 100%;
+			}
+			
+</style>
+<link rel='stylesheet' id='wp-add-custom-css-css' href='https://blogs.vmware.com/vsphere?display_custom_css=css&#038;ver=6.8.1' media='all' />
+<script type="text/javascript" id="crayon_js-js-extra">
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"_2.7.2_beta","is_admin":"0","ajaxurl":"https:\/\/blogs.vmware.com\/vsphere\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Press %s to Copy, %s to Paste","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://blogs.vmware.com/vsphere/_static/??-eJx9jNEKwjAMRX/IrFOm4oP4KVJq6FradKbpZv/eDib4NLjhQjjnqmUCRyaUF2blW94FuW7VRUedzwe1B0F0lrXgP2wSCZKoKRTrKCvDuiaCXEn0B0Znx9BOkNe15m3A3kQiFC5ZYI6LZoRYVtc+f//mPeL9eB0u/dCfbmf/BWxDUWc=" ></script><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://blogs.vmware.com/vsphere/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.8.1" />
+<link rel='shortlink' href='https://blogs.vmware.com/vsphere/?p=34673' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://blogs.vmware.com/vsphere/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblogs.vmware.com%2Fvsphere%2F2022%2F08%2Fintroducing-vsphere-8-the-enterprise-workload-platform.html" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://blogs.vmware.com/vsphere/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblogs.vmware.com%2Fvsphere%2F2022%2F08%2Fintroducing-vsphere-8-the-enterprise-workload-platform.html&#038;format=xml" />
+<script src=" https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="8f4d3580-4337-499c-b909-13704811568b"></script>
+<script type="text/javascript">
+function OptanonWrapper() { }
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KFH48ZHP');</script>
+<!-- End Google Tag Manager -->	<style>img#wpstats{display:none}</style>
+		<script type="application/ld+json" class="wp-parsely-metadata">{"@context":"https:\/\/schema.org","@type":"NewsArticle","headline":"Introducing vSphere 8: The Enterprise Workload Platform","url":"http:\/\/blogs.vmware.com\/vsphere\/2022\/08\/introducing-vsphere-8-the-enterprise-workload-platform.html","mainEntityOfPage":{"@type":"WebPage","@id":"http:\/\/blogs.vmware.com\/vsphere\/2022\/08\/introducing-vsphere-8-the-enterprise-workload-platform.html"},"thumbnailUrl":"https:\/\/blogs.vmware.com\/vsphere\/wp-content\/uploads\/sites\/72\/2022\/08\/2021-vSphere-Family-Icon-576x324-1.png?w=85&h=85&crop=1","image":{"@type":"ImageObject","url":"https:\/\/blogs.vmware.com\/vsphere\/wp-content\/uploads\/sites\/72\/2022\/08\/2021-vSphere-Family-Icon-576x324-1.png"},"articleSection":"Product Announcements","author":[{"@type":"Person","name":"Himanshu Singh"}],"creator":["Himanshu Singh"],"publisher":{"@type":"Organization","name":"VMware vSphere Blog","logo":""},"keywords":["8","announce","announcement","enterprise workload platform","explore","launch","vmware explore","vsphere","vsphere 8"],"dateCreated":"2022-08-30T12:00:05Z","datePublished":"2022-08-30T12:00:05Z","dateModified":"2022-09-12T18:34:36Z"}</script>      <script type="text/javascript">
+  (function() {
+    var didInit = false;
+    function initMunchkin() {
+      if(didInit === false) {
+        didInit = true;
+        // Add configuration settings to the init method
+        Munchkin.init('048-SZW-045');
+      }
+    }
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = '//munchkin.marketo.net/munchkin.js';
+    s.onreadystatechange = function() {
+      if (this.readyState == 'complete' || this.readyState == 'loaded') {
+        initMunchkin();
+      }
+    };
+    s.onload = initMunchkin;
+    document.getElementsByTagName('head')[0].appendChild(s);
+  })();
+  </script>
+</head>
+  <body class="wp-singular post-template-default single single-post postid-34673 single-format-standard wp-theme-vmware-blog-198 introducing-vsphere-8-the-enterprise-workload-platform.html sidebar-primary">
+    <!--[if IE]>
+      <div class="alert alert-warning">
+        You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.      </div>
+    <![endif]-->
+    <header class="banner">
+  <nav class="global-nav">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-9">
+        <div class="brand-links">
+                      <button class="hamburger mobile-trigger" type="button" aria-controls="primaryNavigation" aria-expanded="false" aria-label="Toggle menu">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span class="label">Menu</span>
+            </button>
+                    <a href="https://www.vmware.com/"><img src="//blogs.vmware.com/vsphere/wp-content/themes/vmware-blog-1.9.8/dist/images/VMware-by-Broadcom-Logo_color.svg" alt="VMware" /></a>
+          <a class="name" href="https://blogs.vmware.com/vsphere/">VMware vSphere Blog</a>
+        </div>
+      </div>
+      <div class="col-md-2 col-lg-4 col-xl-3 text-right right-nav">
+        <div class="search-wrap">
+          <form class="search-form" method="get" action="https://blogs.vmware.com/vsphere/">
+  <label class="sr-only" for="s">Search</label>
+  <input class="search-field" placeholder="Search" name="s" />
+  <input type="submit" value="Submit Search" class="search-submit btn">
+</form>
+<button class="search-btn mobile-trigger" type="button" aria-expanded="false" aria-label="Toggle search">
+    <span class="sr-only">Search</span>
+</button>        </div>
+        <button class="dots mobile-trigger" type="button" aria-controls="globalNavigation" aria-expanded="false" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="links-wrap" id="globalNavigation">
+                        <ul class="links">
+                <li><a href="https://blogs.vmware.com/">VMware Blogs</a></li>
+                <li><a href="https://community.broadcom.com/vmware">Communities</a></li>
+              </ul>
+                                  <ul class="social-links d-lg-none">
+                              <li class="icon icon-rss">
+                  <a href="https://blogs.vmware.com/vsphere/feed" target="_rss feed" rel="noopener noreferrer">
+                    <span class="sr-only">RSS Feed</span>
+                  </a>
+                </li>
+                              <li class="icon icon-twitter">
+                  <a href="http://twitter.com/VMwarevSphere" target="_twitter" rel="noopener noreferrer">
+                    <span class="sr-only">Twitter</span>
+                  </a>
+                </li>
+                              <li class="icon icon-youtube">
+                  <a href="https://www.youtube.com/channel/UCN8FHFshMw-15AtFKWSLczA" target="_youtube" rel="noopener noreferrer">
+                    <span class="sr-only">YouTube</span>
+                  </a>
+                </li>
+                              <li class="icon icon-fb">
+                  <a href="https://www.facebook.com/vmwarevsphere" target="_facebook" rel="noopener noreferrer">
+                    <span class="sr-only">Facebook</span>
+                  </a>
+                </li>
+                          </ul>
+                  </div>
+      </div>
+    </div>
+  </div>
+</nav>  <nav class="primary-nav" role="navigation">
+    <div class="container">
+        <div class="row">
+            <div id="primaryNavigation" class="col-12 col-lg-9 main-nav" aria-label="Main Menu">
+                <div class="gradient-mask-wrap">
+                    <div class="gradient-menu-wrap">
+                        <ul id="menu-top-nav" class="menu-top-nav" role="menubar"><li id="menu-item-33221" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-33221"><a href="https://blogs.vmware.com/vsphere" role="menuitem" aria-haspopup="true" aria-expanded="false">Categories</a><button aria-expanded="false" aria-controls="submenu-33221" ><span class="sr-only">Toggle submenu</span></button><div class="gradient-mask"><div class="arrow"></div></div>
+<ul role="menu" class="sub-menu" id="submenu-33221">
+	<li id="menu-item-33220" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-33220"><a href="https://blogs.vmware.com/vsphere/architecture" role="menuitem">Architecture</a></li>
+	<li id="menu-item-33218" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-33218"><a href="https://blogs.vmware.com/vsphere/product-news" role="menuitem">Product Announcements</a></li>
+	<li id="menu-item-33219" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-33219"><a href="https://blogs.vmware.com/vsphere/technical" role="menuitem">Technical</a></li>
+</ul>
+</li>
+<li id="menu-item-19274" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-19274"><a href="http://www.vmware.com" role="menuitem" aria-haspopup="true" aria-expanded="false">Learning</a><button aria-expanded="false" aria-controls="submenu-19274" ><span class="sr-only">Toggle submenu</span></button><div class="gradient-mask"><div class="arrow"></div></div>
+<ul role="menu" class="sub-menu" id="submenu-19274">
+	<li id="menu-item-33217" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33217"><a href="https://core.vmware.com" role="menuitem">vSphere Tech Zone</a></li>
+	<li id="menu-item-19273" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19273"><a href="https://hol.vmware.com/" role="menuitem">Hands-on Labs</a></li>
+	<li id="menu-item-19271" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19271"><a href="http://www.vmware.com/techpapers.html" role="menuitem">Read Whitepapers</a></li>
+</ul>
+</li>
+<li id="menu-item-34642" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-34642"><a href="https://blogs.vmware.com/vsphere/breakroom-chats" role="menuitem">Breakroom Chats</a><div class="gradient-mask"><div class="arrow"></div></div></li>
+</ul>                    </div>
+                    <div class="gradient-menu-mask"></div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-3">
+                                <ul class="social-links">
+                                        <li class="icon icon-rss">
+                        <a href="https://blogs.vmware.com/vsphere/feed" target="_rss feed" rel="noopener noreferrer">
+                            <span class="sr-only">RSS Feed</span>
+                        </a>
+                    </li>
+                                        <li class="icon icon-twitter">
+                        <a href="http://twitter.com/VMwarevSphere" target="_twitter" rel="noopener noreferrer">
+                            <span class="sr-only">Twitter</span>
+                        </a>
+                    </li>
+                                        <li class="icon icon-youtube">
+                        <a href="https://www.youtube.com/channel/UCN8FHFshMw-15AtFKWSLczA" target="_youtube" rel="noopener noreferrer">
+                            <span class="sr-only">YouTube</span>
+                        </a>
+                    </li>
+                                        <li class="icon icon-fb">
+                        <a href="https://www.facebook.com/vmwarevsphere" target="_facebook" rel="noopener noreferrer">
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                    </li>
+                                    </ul>
+                            </div>
+        </div>
+    </div>
+    <div class="gradient-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-9">
+                    <div class="gradient-mask"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+</header>
+    <div class="wrap" role="document">
+      <div class="content">
+        <main>
+          
+<div class="progress" style="display: none;">
+  <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+  <article class="background-off-white">
+    <div class="container background-white mb-4">
+      <div class="row">
+        <div class="col-12">
+          <header class="post-header">
+    <div class="post-header-inner">
+              <div class="post-featured-image">
+            <img src="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/2021-vSphere-Family-Icon-576x324-1.png?w=576&h=324&crop=1"
+            alt="" class="img-fluid" />
+        </div>
+              <div class="post-headline">
+                            <a href="https://blogs.vmware.com/vsphere/product-news" class="category-label">Product Announcements</a>
+                                    <h1 class="entry-title">Introducing vSphere 8: The Enterprise Workload Platform</h1>
+            <div class="entry-meta">
+                    <img class="avatar" src="//blogs.vmware.com/wp-content/uploads/sites/74/2016/07/Himanshu-Singh_avatar_1467917420-30x30.jpg" alt=""/>
+                <div class="author-list">
+                                    <a href="https://blogs.vmware.com/vsphere/author/himanshu_singh" rel="author" class="author">Himanshu Singh</a>
+                            </div>
+                <time class="updated" datetime="2022-08-30" pubdate>August 30, 2022</time>
+            </div>        </div>
+    </div>
+    <div class="gradient-border"></div>
+</header>        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-lg-2">
+          <aside class="sharing d-none d-md-block">
+    <strong>Share on:</strong>
+    <ul class="social-links">
+        <li class="icon icon-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://blogs.vmware.com/vsphere/2022/08/introducing-vsphere-8-the-enterprise-workload-platform.html&text=Introducing vSphere 8: The Enterprise Workload Platform" 
+        target="_blank" rel="noopener noreferrer">
+            <span class="sr-only">Share on Twitter</span>
+        </a>
+        </li>
+        <li class="icon icon-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://blogs.vmware.com/vsphere/2022/08/introducing-vsphere-8-the-enterprise-workload-platform.html" 
+        target="_blank">
+            <span class="sr-only">Share on LinkedIn</span>
+        </a>
+        </li>
+        <li class="icon icon-fb">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://blogs.vmware.com/vsphere/2022/08/introducing-vsphere-8-the-enterprise-workload-platform.html"
+        target="_blank">
+            <span class="sr-only">Share on Facebook</span>
+        </a>
+        </li>
+        <li class="icon icon-mail">
+        <a href="mailto:?subject=Introducing vSphere 8: The Enterprise Workload Platform&body=https://blogs.vmware.com/vsphere/2022/08/introducing-vsphere-8-the-enterprise-workload-platform.html" target="_blank">
+            <span class="sr-only">Email this post</span>
+        </a>
+        </li>
+    </ul>
+    </aside>        </div>
+        <div class="col-md-8">
+          <div class="entry-content" data-langdir="ltr">
+            <h2><strong>Workloads are growing everywhere</strong></h2>
+<p>As organizations embrace cloud, they are beginning to turn a new chapter in the era of multi-cloud. Multi-cloud has quickly become the dominant deployment model. According to a 451 Research study, 75% of all enterprises have multi-cloud footprints<sup> (1)</sup>. Many enterprises choose to run mission critical workloads on-premises to take advantage of data locality, predictable workload performance and low network latency. As larger masses of data accumulate in the enterprise, they tend to attract more local services and applications to minimize latency, increase throughput, and maximize workload performance.</p>
+<p><img fetchpriority="high" decoding="async" class="aligncenter wp-image-34771" src="https://blogs.vmware.com/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-workloads-everywhere-220x106.png" alt="" width="1000" height="483" /></p>
+<h2><strong>Consumption model preferences are evolving </strong></h2>
+<p>IDC predicts that by 2025, 60% of enterprises will fund projects through OpEx budgets<sup>(2)</sup>. This trend is evident with IT organizations continuing to embrace cloud-based consumption models for infrastructure services. Lines-of-business are increasingly making their own choices for infrastructure and services based on unique needs. Software-as-a-service is quickly emerging as a central strategy that businesses are adopting to save time and achieve goals quicker. In fact, Gartner expects worldwide SaaS spending to reach $208 Billion by year 2023<sup>(3)</sup>.</p>
+<h2><strong>Demand for infrastructure services is increasing<br />
+</strong></h2>
+<p><img decoding="async" class="alignright wp-image-34767" src="https://blogs.vmware.com/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-infra-demand-192x170.png" alt="" width="410" height="363" /></p>
+<p>The volume and complexity of modern workloads are increasing, which is creating higher demand for infrastructure services that provide key underlying functionality for these workloads. The increasing demand for software defined infrastructure services places more strain on CPUs, leaving fewer compute cycles for workloads. Newer classes of hardware accelerators like Data Processing Units (DPUs, also known as SmartNICs) have been successfully used by hyperscalers to offload and accelerate infrastructure functions, freeing up CPU cycles to run workloads. As DPUs become more mainstream in the infrastructure, there is an increasing number of hardware choices from vendors with varying sets of capabilities. IT infrastructure teams are faced with the challenge of abstracting the hardware differences and presenting a uniform consumption interface to users.</p>
+<h2><strong>Security threats to Data Center traffic are rising<br />
+</strong></h2>
+<p>Modern applications are also increasingly micro-services based and drive-up East-West network traffic within the data center. When it comes to securing the enterprise network, traditional firewalls focus solely on the network perimeter, with limited understanding of application topologies and behaviors. Traditional distributed firewalling approaches require host-based agents to secure the network within the data center, and result in complex security architectures and operations. With workloads and infrastructure services sharing a domain, the chances of malicious actors penetrating the network perimeter and persisting in the network are higher.</p>
+<h2><strong>Traditional approaches to meet the needs of next-gen infrastructure do not work</strong></h2>
+<p>Adding new server capacity to meet the increasing demand for infrastructure results in higher total cost of ownership. Application specific silos, such as GPU-based servers for running AI/ML workloads, do not scale well to run traditional IT workloads. This results in an inflexible architecture that leads to additional operational complexities. In a converged domain where workloads run alongside infrastructure services, the CPU complex becomes a single point of failure as has been shown by low level security exploits in the recent past.</p>
+<p>On top of it all, IT organizations are expected to deliver uniform infrastructure consumption experiences across multi-clouds to develop, deploy and maintain high performant applications in a cost-effective and secure manner.</p>
+<p>What if you could supercharge workload performance while scaling infrastructure services across the enterprise and reduce the total cost of infrastructure?</p>
+<p>What if you could enable development teams to accelerate their innovation and deliver IaaS services directly to their development environments?</p>
+<p>What if the benefits of cloud were made available to on-premises workloads without requiring lift-and-shift?</p>
+<p>What if you could centrally manage on-premises infrastructure and reduce the operational burden of maintenance?</p>
+<p>Well, the time to wonder ‘what if’ is over.</p>
+<h1><strong>Introducing VMware vSphere 8 </strong></h1>
+<p>VMware vSphere 8, the enterprise workload platform, brings the benefits of cloud to on-premises workloads, supercharges performance through DPUs and GPUs, and accelerates innovation with an enterprise-ready integrated Kubernetes runtime. Let’s get into more detail.</p>
+<p><img loading="lazy" decoding="async" class="alignleft wp-image-34764 size-full" src="https://blogs.vmware.com/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-supercharge-pillar.png" alt="" width="840" height="172" srcset="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-supercharge-pillar.png 840w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-supercharge-pillar.png?resize=220,45 220w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-supercharge-pillar.png?resize=768,157 768w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-supercharge-pillar.png?resize=600,123 600w" sizes="auto, (max-width: 840px) 100vw, 840px" /></p>
+<p>vSphere 8 ushers in a new era of heterogeneous computing by introducing Data Processing Units to Enterprises through VMware vSphere Distributed Services Engine. vSphere Distributed Services Engine is the next step in the evolution of cloud infrastructure for modern applications, in which the stewardship for running infrastructure services is distributed between the CPU and the DPU.</p>
+<p>vSphere Distributed Services Engine modernizes cloud infrastructure into a distributed architecture enabled by DPUs to:</p>
+<ul>
+<li>Meet the throughput and latency needs of modern distributed workloads by accelerating networking functions</li>
+<li>Deliver best infrastructure price-performance by providing more CPU resources to workloads</li>
+<li>Reduce operational overhead of DPU lifecycle management with integrated vSphere workflows</li>
+</ul>
+<p>vSphere Distributed Services Engine preserves the existing Day-0, Day-1 and Day-2 vSphere experience, with which customers are familiar. It is supported on a broad choice of DPUs from leading silicon vendors (NVIDIA &amp; AMD) and server designs from OEMs (Dell, HPE).</p>
+<p>Distributed Services Engine offloads and accelerates vSphere Distributed Switch and NSX Networking on the DPU, with additional services to follow in the future. So right away, this will benefit customers running applications that demand high network bandwidth and fast cache access such as in-memory databases.</p>
+<p>Our internal benchmarking study running Redis on a DPU-enabled host achieved 36% better throughput along with a 27% reduction in transaction latency. In another scenario, a DPU-enabled host achieved performance similar to a non-DPU system, with 20% fewer CPU cores. These powerful results show how vSphere 8 enables customers to lower total cost of computing and improve workload performance.</p>
+<p><img loading="lazy" decoding="async" class="aligncenter  wp-image-34880" src="https://blogs.vmware.com/wp-content/uploads/sites/72/2022/09/vsphere-8-launch-dpu-perf-220x104.png" alt="" width="987" height="467" /></p>
+<p>Moreover, with vSphere 8 IT admins can reduce operational overhead of operating DPUs in the infrastructure by leveraging integrated vSphere workflows to manage lifecycle and monitor performance.</p>
+<p>We are thrilled to note that our technology partnerships have produced market ready end-to-end solutions. Today, Dell Technologies <a href="https://www.dell.com/en-us/blog/multicloud-on-your-terms-with-vxrail/" target="_blank" rel="noopener">announced the launch of SmartDPU Software Solutions</a> on the VxRail<sup>TM</sup>   platform with a choice of DPUs from AMD Pensando and NVIDIA. HPE <a href="https://community.hpe.com/t5/Servers-Systems-The-Right/Next-generation-virtual-infrastructure-boosts-workloads/ba-p/7172767" target="_blank" rel="noopener">announced the launch of HPE ProLiant with VMware vSphere® Distributed Services Engine&#x2122;</a> &#8211; based on DPUs from AMD Pensando. We are also excited about the rapid progress that our other partners like Lenovo and Intel are making in bringing more solutions to the market, providing even more choices for our customers.</p>
+<p><img loading="lazy" decoding="async" class="aligncenter wp-image-34732" src="https://blogs.vmware.com/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-dpu-ecosystem-220x113.png" alt="" width="1000" height="512" /></p>
+<p>When it comes to improving workload performance, vSphere 8 does not stop here. vSphere 8 improves AI/ML model training times and achieves unparalleled levels of performance for the most demanding and complex models by adding support for up to 32 NVIDIA GPUs devices in Passthrough mode – a 4x increase compared to vSphere 7.</p>
+<p><img loading="lazy" decoding="async" class="aligncenter wp-image-34776" src="https://blogs.vmware.com/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-nvidia-perf-220x113.png" alt="" width="1000" height="512" /></p>
+<p>Moreover, AI/ML development teams can now achieve higher levels of scalability of available GPU resources with support for up to 8 vGPUs per VM &#8211; a 2x increase compared to vSphere 7.</p>
+<p><img loading="lazy" decoding="async" class="alignleft wp-image-34761 size-full" src="https://blogs.vmware.com/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-accelerate-innnov-pillar.png" alt="" width="841" height="169" srcset="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-accelerate-innnov-pillar.png 841w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-accelerate-innnov-pillar.png?resize=220,44 220w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-accelerate-innnov-pillar.png?resize=768,154 768w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-accelerate-innnov-pillar.png?resize=600,121 600w" sizes="auto, (max-width: 841px) 100vw, 841px" /></p>
+<p>While Kubernetes has gained widespread adoption as the de-facto container orchestration technology, IT organizations need a simple and easy way to manage containers alongside VMs. That is why VMware created a streamlined Kubernetes management experience that is natively built into vSphere. With vSphere 8, VMware is delivering <a href="https://tanzu.vmware.com/content/blog/vmware-tanzu-kubernetes-grid-2-0" target="_blank" rel="noopener">VMware Tanzu Kubernetes Grid 2.0</a> &#8211; designed to help IT teams and developers address the growing complexity of agile development environments. This latest release of Tanzu Kubernetes Grid adds new flexibility and control for cluster creation, open-source API alignment, and improved application lifecycle management capabilities.</p>
+<p>DevOps teams spend a significant amount of time setting up Kubernetes clusters. Even in cases where infrastructure services are readily accessible, they are designed to meet the needs of IT admins and not necessarily integrated with the development environment. As a result, developers either rely on IT admins to provision developer services or standup infrastructure silos to address their needs. With vSphere 8, DevOps teams can now access IaaS services (like provisioning VMs, networking, setting up Tanzu Kubernetes Grid clusters) easily from the new Cloud Consumption Interface service. The Cloud Consumption Interface simplifies infrastructure setup across the vSphere estate through intuitive UIs and developer friendly APIs, freeing up time that can be spent on real development efforts.</p>
+<p><img loading="lazy" decoding="async" class="aligncenter wp-image-34747" src="https://blogs.vmware.com/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-tanzu-cci-etc-220x109.png" alt="" width="1001" height="497" /></p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><em>Provisioning Infrastructure through Cloud Consumption Interface</em></p>
+<p><img loading="lazy" decoding="async" class="aligncenter wp-image-34702" src="https://blogs.vmware.com/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-CCI-220x132.png" alt="" width="1001" height="600" srcset="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-CCI-220x132.png 220w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-CCI-1024x614.png 1024w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-CCI-768x461.png 768w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-CCI-1536x921.png 1536w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-CCI-2048x1228.png 2048w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-CCI-600x360.png 600w" sizes="auto, (max-width: 1001px) 100vw, 1001px" /></p>
+<p>With vSphere 8, TKG Availability Zones can be deployed across 3 clusters, which increases the overall resilience of containerized workloads to infrastructure failures. Simplified cluster creation has been made possible thanks a new Cluster API feature called Cluster Class. Users can now create, scale, upgrade and delete clusters, all from a single place. Provisioning, upgrading, and operating multiple Kubernetes clusters is now a simplified, declarative process. Carvel based tooling has been introduced to allow application developers and platform operators to build on Kubernetes with confidence.</p>
+<p><img loading="lazy" decoding="async" class="alignleft wp-image-34762 size-full" src="https://blogs.vmware.com/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-cloud-pillar.png" alt="" width="850" height="183" srcset="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-cloud-pillar.png 850w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-cloud-pillar.png?resize=220,47 220w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-cloud-pillar.png?resize=768,165 768w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-cloud-pillar.png?resize=600,129 600w" sizes="auto, (max-width: 850px) 100vw, 850px" /></p>
+<p>In June of this year, <a href="https://blogs.vmware.com/vsphere/2022/06/vmware-vsphereplus-introducing-the-multi-cloud-workload-platform.html" target="_blank" rel="noopener">we launched VMware vSphere+</a>, a new offering from the vSphere family, which combines industry-leading cloud infrastructure technology, an enterprise-ready Kubernetes environment, and high-value cloud services to transform existing on-premises deployments into SaaS-enabled infrastructure . vSphere 8 takes these benefits several steps further.</p>
+<p><img loading="lazy" decoding="async" class="aligncenter wp-image-34719" src="https://blogs.vmware.com/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-cloud-services-220x113.png" alt="" width="1000" height="512" /></p>
+<p>With vSphere 8, IT admins can deploy the following add-on cloud services that protect workloads and optimize infrastructure, with more on the way.</p>
+<p>VMware Cloud Disaster Recovery add-on service drives resilience of mission critical workloads by protecting them from disasters and ransomware.</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><em>Protect workloads with VMware Cloud Disaster Recovery </em></p>
+<p><img loading="lazy" decoding="async" class="aligncenter wp-image-34712" src="https://blogs.vmware.com/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-vcdr-220x132.png" alt="" width="1000" height="600" srcset="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-vcdr-220x132.png 220w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-vcdr-1024x614.png 1024w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-vcdr-768x461.png 768w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-vcdr-1536x921.png 1536w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-vcdr-2048x1228.png 2048w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-vcdr-600x360.png 600w" sizes="auto, (max-width: 1000px) 100vw, 1000px" /></p>
+<p>VMware vRealize Operations add-on service provides capacity planning and optimization for your infrastructure with the right size to fit the current and future needs of your workloads.</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><em>Easily get details on CPU, memory and storage consumption</em></p>
+<p><img loading="lazy" decoding="async" class="aligncenter wp-image-34701" src="https://blogs.vmware.com/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-capacity-planning-220x132.png" alt="" width="1001" height="600" srcset="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-capacity-planning-220x132.png 220w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-capacity-planning-1024x614.png 1024w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-capacity-planning-768x460.png 768w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-capacity-planning-1536x921.png 1536w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-capacity-planning-2048x1228.png 2048w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-capacity-planning-600x360.png 600w" sizes="auto, (max-width: 1001px) 100vw, 1001px" /></p>
+<p><img loading="lazy" decoding="async" class="alignleft wp-image-34763 size-full" src="https://blogs.vmware.com/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-op-efficiency-pillar.png" alt="" width="841" height="178" srcset="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-op-efficiency-pillar.png 841w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-op-efficiency-pillar.png?resize=220,47 220w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-op-efficiency-pillar.png?resize=768,163 768w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-op-efficiency-pillar.png?resize=600,127 600w" sizes="auto, (max-width: 841px) 100vw, 841px" /></p>
+<p>IT admins spend a lot of time upgrading and maintaining infrastructure. Though regular maintenance operations help ensure uptime and availability, they take time away from running business critical applications. vSphere 8 optimizes maintenance windows by pre-staging ESXi image downloads and performing simultaneous upgrades on hosts, allowing teams to return faster to regular operations.</p>
+<p>With the growth of workloads on-premises and at the edge, initial placement and migration are critical aspects that help infrastructure teams maximize service availability, balance utilization, and minimize downtime. vSphere 8 gives a major upgrade to vSphere Distributed Resource Scheduler and vMotion. Distributed Resources Scheduler now factors workload memory usage into placement decisions. It can now place workloads more optimally by taking into consideration memory needs of workloads.</p>
+<p>vMotion now supports migration of VMs running on hosts that support Intel Scalable I/O Virtualization (Intel SIOV). Workloads can now simultaneously enjoy the benefits of SIOV passthrough performance and mobility across the vSphere infrastructure.</p>
+<p>According to an IDC study, 65% of the global GDP will be digitalized by 2022<sup>(4)</sup>. The IDC study points out the Global Data Sphere is expected to double between 2022 and 2026<sup>(5)</sup>. As the footprint of computing continues to grow, many enterprises are starting to think about sustainable ways to operate infrastructure. VMware has taken the first step in helping enterprises develop sustainable computing strategies. vSphere 8 introduces Green Metrics – that help you track power consumed by workloads and infrastructure operations. This is just the first step in helping customers realize the potential and opportunities to reduce their carbon footprint while meeting business objectives.</p>
+<p style="text-align: center;"><em>vSphere 8 Green Metrics</em></p>
+<p style="text-align: center;"><strong> <img loading="lazy" decoding="async" class="alignnone wp-image-34707" src="https://blogs.vmware.com/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-green-metrics-220x132.png" alt="" width="1001" height="600" srcset="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-green-metrics-220x132.png 220w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-green-metrics-1024x614.png 1024w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-green-metrics-768x461.png 768w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-green-metrics-1536x921.png 1536w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-green-metrics-2048x1228.png 2048w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/vsphere-8-launch-green-metrics-600x360.png 600w" sizes="auto, (max-width: 1001px) 100vw, 1001px" /></strong></p>
+<p><strong> </strong></p>
+<h2><strong>Learn more</strong></h2>
+<p>Find out how vSphere 8 can supercharge workload performance, accelerate innovation for DevOps, and enhance operational efficiency – all while bringing the benefits of the cloud to on-premises workloads</p>
+<ul>
+<li>Visit <a href="http://www.vsphere.com" target="_blank" rel="noopener">vSphere.com</a></li>
+<li>Read the <a href="https://news.vmware.com/releases/vmware-cloud-edge-infrastructure-innovations" target="_blank" rel="noopener">Press Release</a></li>
+<li>Read the <a href="https://core.vmware.com/resource/whats-new-vsphere-8" target="_blank" rel="noopener">vSphere 8 Technical Overview Blog</a></li>
+<li>Read what our <a href="https://news.vmware.com/releases/vmware-vsphere-8-partners" target="_blank" rel="noopener">partners are saying</a> about vSphere 8</li>
+<li>Try vSphere <a href="https://customerconnect.vmware.com/en/web/vmware/evalcenter?p=vsphere-hol-dse-ov-23" target="_blank" rel="noopener">Distributed Services Engine Hands-On-Lab</a>!</li>
+<li>Coming soon
+<ul>
+<li>vSphere 8 Hands-On-Lab!</li>
+</ul>
+</li>
+</ul>
+<p><strong>Sources</strong></p>
+<p>(1) Posey, Melanie. <em>Voice of the Enterprise: Vendor Evaluations 2021 Cloud, Hosting &amp; Managed Services</em>. S&amp;P Global. Published Feb 2022</p>
+<p>(2) IDC, IDC FutureScape: Worldwide Future of Digital Infrastructure 2022 Predictions, Oct 2021, Doc # US47441321</p>
+<p>(3) Gartner®, Gartner Forecasts Worldwide Public Cloud End-User Spending to Reach Nearly $500 Billion in 2022, Press Release, April 19 2022</p>
+<p>GARTNER is a registered trademark and service mark of Gartner, Inc. and/or its affiliates in the U.S. and internationally and is used herein with permission. All rights reserved.</p>
+<p>(4) IDC, IDC FutureScape: Worldwide Digital Transformation 2021 Predictions, Oct 2020, Doc # US46880818</p>
+<p>(5) IDC, Worldwide IDC Global DataSphere Forecast, 2022–2026: Enterprise Organizations Driving Most of the Data Growth, May 2022, Doc # US49018922</p>
+<p><strong> </strong></p>
+<p><strong> </strong></p>
+<div class="crp_related     crp-rounded-thumbs"><h3>Related Posts:</h3><ul><li><a href="https://blogs.vmware.com/vsphere/2022/06/vmware-vsphereplus-introducing-the-multi-cloud-workload-platform.html"     class="crp_link post-34508"><figure><img loading="lazy" decoding="async" width="150" height="150" src="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/06/vmw-prod-icon-vsphere_plus-vert-e1657747775755.png?w=150&amp;h=150&amp;crop=1" class="crp_featured crp_thumb crp_thumbnail" alt="vSphere+ Logo Official" style="" title="VMware vSphere+: Introducing The Enterprise Workload Platform" srcset="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/06/vmw-prod-icon-vsphere_plus-vert-e1657747775755.png?resize=85,85 85w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/06/vmw-prod-icon-vsphere_plus-vert-e1657747775755.png?resize=150,150 150w" sizes="auto, (max-width: 150px) 100vw, 150px" /></figure><span class="crp_title">VMware vSphere+: Introducing The Enterprise Workload&hellip;</span></a></li><li><a href="https://blogs.vmware.com/vsphere/2023/11/announcing-new-collaborations-in-vmware-private-ai.html"     class="crp_link post-35845"><figure><img loading="lazy" decoding="async" width="150" height="150" src="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2023/08/VMWX-23_D1_GS_SHOWFLOW_v3_0821_1pm-1.jpg?w=150&amp;h=150&amp;crop=1" class="crp_featured crp_thumb crp_thumbnail" alt="VMWX-23_D1_GS_SHOWFLOW_v3_0821_1pm" style="" title="Announcing New Collaborations in VMware Private AI" srcset="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2023/08/VMWX-23_D1_GS_SHOWFLOW_v3_0821_1pm-1.jpg?resize=85,85 85w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2023/08/VMWX-23_D1_GS_SHOWFLOW_v3_0821_1pm-1.jpg?resize=360,360 360w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2023/08/VMWX-23_D1_GS_SHOWFLOW_v3_0821_1pm-1.jpg?resize=150,150 150w" sizes="auto, (max-width: 150px) 100vw, 150px" /></figure><span class="crp_title">Announcing New Collaborations in VMware Private AI</span></a></li><li><a href="https://blogs.vmware.com/vsphere/2022/12/introducing-vmware-vsphere-standard-edition.html"     class="crp_link post-35048"><figure><img loading="lazy" decoding="async" width="150" height="150" src="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/06/vmw-prod-icon-vsphere_plus-vert-e1657747775755.png?w=150&amp;h=150&amp;crop=1" class="crp_featured crp_thumb crp_thumbnail" alt="vSphere+ Logo Official" style="" title="Introducing VMware vSphere+ Standard edition" srcset="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/06/vmw-prod-icon-vsphere_plus-vert-e1657747775755.png?resize=85,85 85w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/06/vmw-prod-icon-vsphere_plus-vert-e1657747775755.png?resize=150,150 150w" sizes="auto, (max-width: 150px) 100vw, 150px" /></figure><span class="crp_title">Introducing VMware vSphere+ Standard edition</span></a></li><li><a href="https://blogs.vmware.com/vsphere/2023/08/announcing-vsphere-q3-2023-release.html"     class="crp_link post-35510"><figure><img loading="lazy" decoding="async" width="150" height="150" src="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2023/08/vSphere8-Update2-01-FB.png?w=150&amp;h=150&amp;crop=1" class="crp_featured crp_thumb crp_thumbnail" alt="vSphere 8 Update 2" style="" title="Announcing vSphere Q3 2023 Release" srcset="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2023/08/vSphere8-Update2-01-FB.png?resize=85,85 85w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2023/08/vSphere8-Update2-01-FB.png?resize=360,360 360w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2023/08/vSphere8-Update2-01-FB.png?resize=150,150 150w" sizes="auto, (max-width: 150px) 100vw, 150px" /></figure><span class="crp_title">Announcing vSphere Q3 2023 Release</span></a></li><li><a href="https://blogs.vmware.com/vsphere/2023/03/announcing-vsphere-8-update-1.html"     class="crp_link post-35151"><figure><img loading="lazy" decoding="async" width="150" height="150" src="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/2021-vSphere-Family-Icon-576x324-1.png?w=150&amp;h=150&amp;crop=1" class="crp_featured crp_thumb crp_thumbnail" alt="2021-vSphere-Family-Icon-576&#215;324" style="" title="Introducing vSphere 8 Update 1" srcset="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/2021-vSphere-Family-Icon-576x324-1.png?resize=85,85 85w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/2021-vSphere-Family-Icon-576x324-1.png?resize=150,150 150w" sizes="auto, (max-width: 150px) 100vw, 150px" /></figure><span class="crp_title">Introducing vSphere 8 Update 1</span></a></li><li><a href="https://blogs.vmware.com/vsphere/2023/06/enterprise-strategy-group-whitepaper-accelerate-innovation-and-transform-operations-with-vmware-vsphere.html"     class="crp_link post-35489"><figure><img loading="lazy" decoding="async" width="150" height="150" src="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2023/06/vmw-prod-icon-vsphere_plus-vert-e1657747775755.png?w=150&amp;h=150&amp;crop=1" class="crp_featured crp_thumb crp_thumbnail" alt="vmw-prod-icon-vsphere_plus-vert-e1657747775755" style="" title="Enterprise Strategy Group Whitepaper: Accelerate Innovation and Transform Operations with VMware vSphere+&#x2122;" srcset="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2023/06/vmw-prod-icon-vsphere_plus-vert-e1657747775755.png?resize=85,85 85w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2023/06/vmw-prod-icon-vsphere_plus-vert-e1657747775755.png?resize=150,150 150w" sizes="auto, (max-width: 150px) 100vw, 150px" /></figure><span class="crp_title">Enterprise Strategy Group Whitepaper: Accelerate&hellip;</span></a></li><li><a href="https://blogs.vmware.com/vsphere/2022/12/democratize-ai-ml-all-enterprises-vsphere-and-nvidia-ai-enterprise-3-0.html"     class="crp_link post-35026"><figure><img loading="lazy" decoding="async" width="150" height="150" src="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/2021-vSphere-Family-Icon-576x324-1.png?w=150&amp;h=150&amp;crop=1" class="crp_featured crp_thumb crp_thumbnail" alt="2021-vSphere-Family-Icon-576&#215;324" style="" title="Democratize AI and ML for All Enterprises with VMware vSphere and NVIDIA AI Enterprise 3.0" srcset="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/2021-vSphere-Family-Icon-576x324-1.png?resize=85,85 85w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/2021-vSphere-Family-Icon-576x324-1.png?resize=150,150 150w" sizes="auto, (max-width: 150px) 100vw, 150px" /></figure><span class="crp_title">Democratize AI and ML for All Enterprises with&hellip;</span></a></li><li><a href="https://blogs.vmware.com/vsphere/2024/04/vmware-vsphere-foundation-optimizing-private-clouds-and-driving-it-value.html"     class="crp_link post-35898"><figure><img loading="lazy" decoding="async" width="150" height="150" src="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2024/03/ITValue-scaled.jpeg?w=150&amp;h=150&amp;crop=1" class="crp_featured crp_thumb crp_thumbnail" alt="Increase value, growth value, company value added or business growth concept. Businessman show circle  bar info graphic technology background. Sale digital marketing leadership success target" style="" title="VMware vSphere Foundation: Optimizing Private Clouds and Driving IT Value" srcset="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2024/03/ITValue-85x85.jpeg 85w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2024/03/ITValue-360x360.jpeg 360w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2024/03/ITValue-150x150.jpeg 150w" sizes="auto, (max-width: 150px) 100vw, 150px" /></figure><span class="crp_title">VMware vSphere Foundation: Optimizing Private Clouds&hellip;</span></a></li><li><a href="https://blogs.vmware.com/vsphere/2023/08/introducing-vmware-private-ai-foundation.html"     class="crp_link post-35584"><figure><img loading="lazy" decoding="async" width="150" height="150" src="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2023/08/VMWX-23_D1_GS_SHOWFLOW_v3_0821_1pm-1.jpg?w=150&amp;h=150&amp;crop=1" class="crp_featured crp_thumb crp_thumbnail" alt="VMWX-23_D1_GS_SHOWFLOW_v3_0821_1pm" style="" title="Announcing the launch of VMware Private AI: Democratize generative AI and ignite innovation for all enterprises" srcset="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2023/08/VMWX-23_D1_GS_SHOWFLOW_v3_0821_1pm-1.jpg?resize=85,85 85w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2023/08/VMWX-23_D1_GS_SHOWFLOW_v3_0821_1pm-1.jpg?resize=360,360 360w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2023/08/VMWX-23_D1_GS_SHOWFLOW_v3_0821_1pm-1.jpg?resize=150,150 150w" sizes="auto, (max-width: 150px) 100vw, 150px" /></figure><span class="crp_title">Announcing the launch of VMware Private AI:&hellip;</span></a></li><li><a href="https://blogs.vmware.com/vsphere/2022/06/announcing-vsphereplus-and-vsanplus-to-deliver-benefits-of-cloud-to-on-premises-workloads.html"     class="crp_link post-34454"><figure><img loading="lazy" decoding="async" width="150" height="150" src="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/06/vmw-prod-icon-vsphere_plus-vert-e1657747775755.png?w=150&amp;h=150&amp;crop=1" class="crp_featured crp_thumb crp_thumbnail" alt="vSphere+ Logo Official" style="" title="Announcing VMware vSphere+ and VMware vSAN+ to Deliver Benefits of Cloud to On-Premises Workloads" srcset="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/06/vmw-prod-icon-vsphere_plus-vert-e1657747775755.png?resize=85,85 85w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/06/vmw-prod-icon-vsphere_plus-vert-e1657747775755.png?resize=150,150 150w" sizes="auto, (max-width: 150px) 100vw, 150px" /></figure><span class="crp_title">Announcing VMware vSphere+ and VMware vSAN+ to&hellip;</span></a></li><li><a href="https://blogs.vmware.com/vsphere/2022/10/vsphere-8-now-available.html"     class="crp_link post-34923"><figure><img loading="lazy" decoding="async" width="150" height="150" src="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/10/vSphere-8-Is-Here-GA.png?w=150&amp;h=150&amp;crop=1" class="crp_featured crp_thumb crp_thumbnail" alt="vSphere 8 Is Here GA" style="" title="Announcing: vSphere 8 Initial Availability" srcset="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/10/vSphere-8-Is-Here-GA.png?resize=85,85 85w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/10/vSphere-8-Is-Here-GA.png?resize=360,360 360w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/10/vSphere-8-Is-Here-GA.png?resize=150,150 150w" sizes="auto, (max-width: 150px) 100vw, 150px" /></figure><span class="crp_title">Announcing: vSphere 8 Initial Availability</span></a></li><li><a href="https://blogs.vmware.com/vsphere/2022/11/cloud-consumption-interface-technical-overview.html"     class="crp_link post-34993"><figure><img loading="lazy" decoding="async" width="150" height="150" src="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/2021-vSphere-Family-Icon-576x324-1.png?w=150&amp;h=150&amp;crop=1" class="crp_featured crp_thumb crp_thumbnail" alt="2021-vSphere-Family-Icon-576&#215;324" style="" title="Cloud Consumption Interface: Technical Overview" srcset="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/2021-vSphere-Family-Icon-576x324-1.png?resize=85,85 85w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2022/08/2021-vSphere-Family-Icon-576x324-1.png?resize=150,150 150w" sizes="auto, (max-width: 150px) 100vw, 150px" /></figure><span class="crp_title">Cloud Consumption Interface: Technical Overview</span></a></li><li><a href="https://blogs.vmware.com/vsphere/2023/04/announcing-vmware-cloud-packs-to-accelerate-your-cloud-transformation.html"     class="crp_link post-35256"><figure><img loading="lazy" decoding="async" width="150" height="150" src="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2021/06/150DPIx-Illu-mcld-multipleclouds-whtbg.jpg?w=150&amp;h=150&amp;crop=1" class="crp_featured crp_thumb crp_thumbnail" alt="150DPIx-Illu-mcld-multipleclouds-whtbg" style="" title="Announcing VMware Cloud Packs To Accelerate Your Cloud Transformation" srcset="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2021/06/150DPIx-Illu-mcld-multipleclouds-whtbg.jpg?resize=85,85 85w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2021/06/150DPIx-Illu-mcld-multipleclouds-whtbg.jpg?resize=360,360 360w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2021/06/150DPIx-Illu-mcld-multipleclouds-whtbg.jpg?resize=150,150 150w" sizes="auto, (max-width: 150px) 100vw, 150px" /></figure><span class="crp_title">Announcing VMware Cloud Packs To Accelerate Your&hellip;</span></a></li><li><a href="https://blogs.vmware.com/vsphere/2024/01/embracing-change-with-vmware-vsphere-foundation.html"     class="crp_link post-35868"><figure><img loading="lazy" decoding="async" width="150" height="150" src="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2024/01/AdobeStock_490555667-scaled-e1705522046455.jpeg?w=150&amp;h=150&amp;crop=1" class="crp_featured crp_thumb crp_thumbnail" alt="Bringing technical components together to make one solution" style="" title="Embracing Change with VMware vSphere Foundation" srcset="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2024/01/AdobeStock_490555667-scaled-e1705522046455-85x85.jpeg 85w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2024/01/AdobeStock_490555667-scaled-e1705522046455-360x360.jpeg 360w, https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2024/01/AdobeStock_490555667-scaled-e1705522046455-150x150.jpeg 150w" sizes="auto, (max-width: 150px) 100vw, 150px" /></figure><span class="crp_title">Embracing Change with VMware vSphere Foundation</span></a></li></ul><div class="crp_clear"></div></div>          </div>
+          <footer class="entry-footer">
+                    <div class="author-footer">
+              <div class="author-avatar">
+                  <a href="https://blogs.vmware.com/vsphere/author/himanshu_singh">
+                    <img src="//blogs.vmware.com/wp-content/uploads/sites/74/2016/07/Himanshu-Singh_avatar_1467917420-70x70.jpg" class="rounded-circle img-fluid" alt="">
+                  </a>
+              </div>
+              <div class="author-details">
+                  <h4><a href="https://blogs.vmware.com/vsphere/author/himanshu_singh">Himanshu Singh</a></h4>
+                  <p>Himanshu Singh is Director of Product Marketing for Compute, Kubernetes and AI, in Broadcom's VCF Division. His team is responsible for private AI, Kubernetes in VCF, modern workloads, and the&hellip;</p>
+                                </div>
+            </div>
+                    </footer>
+        </div>
+      </div>
+    </div>
+      <div class="container background-white pl-4 pr-4 related-posts">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="mt-4 mb-3">Related Articles</h2>
+      </div>
+    </div>
+    <div class="row">
+       
+        <div class="col-12 col-md-4 stacked-posts">
+        
+<article class="card post-34673 post type-post status-publish format-standard has-post-thumbnail hentry category-product-news tag-1474 tag-announce tag-announcement tag-enterprise-workload-platform tag-explore tag-launch tag-vmware-explore tag-vsphere tag-vsphere-8">
+  <div class="image-wrap">
+          <a href="https://blogs.vmware.com/vsphere/2024/04/vmware-vsphere-foundation-optimizing-private-clouds-and-driving-it-value.html" title="VMware vSphere Foundation: Optimizing Private Clouds and Driving IT Value">
+        <picture>
+          <source media="(max-width: 768px)"
+            srcset="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2024/03/ITValue-scaled.jpeg?w=576&h=324&crop=1">
+          <source media="(max-width: 992px)"
+           srcset="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2024/03/ITValue-scaled.jpeg?w=752&h=423&crop=1">
+          <img src="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2024/03/ITValue-scaled.jpeg?w=576&h=324&crop=1" 
+        alt="Increase value, growth value, company value added or business growth concept. Businessman show circle  bar info graphic technology background. Sale digital marketing leadership success target" class="" />
+        </picture>
+      </a>
+      </div>
+  <div class="content-wrap">
+    <div class="content-inner">
+                        <a href="https://blogs.vmware.com/vsphere/product-news" class="category-label">Product Announcements</a>
+                    <h2 class="title"><a href="https://blogs.vmware.com/vsphere/2024/04/vmware-vsphere-foundation-optimizing-private-clouds-and-driving-it-value.html">VMware vSphere Foundation: Optimizing Private Clouds and Driving IT Value</a></h2>
+                  <div class="entry-meta">
+                    <img class="avatar" src="//blogs.vmware.com/wp-content/uploads/sites/74/2016/07/Himanshu-Singh_avatar_1467917420-30x30.jpg" alt=""/>
+                <div class="author-list">
+                                    <a href="https://blogs.vmware.com/vsphere/author/himanshu_singh" rel="author" class="author">Himanshu Singh</a>
+                            </div>
+                <time class="updated" datetime="2024-04-10" pubdate>April 10, 2024</time>
+            </div>    </div>
+  </div>
+</article>
+        </div>
+       
+        <div class="col-12 col-md-4 stacked-posts">
+        
+<article class="card post-34673 post type-post status-publish format-standard has-post-thumbnail hentry category-product-news tag-1474 tag-announce tag-announcement tag-enterprise-workload-platform tag-explore tag-launch tag-vmware-explore tag-vsphere tag-vsphere-8">
+  <div class="image-wrap image-too-narrow">
+          <a href="https://blogs.vmware.com/vsphere/2024/01/embracing-change-with-vmware-vsphere-foundation.html" title="Embracing Change with VMware vSphere Foundation">
+        <picture>
+          <source media="(max-width: 768px)"
+            srcset="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2024/01/AdobeStock_490555667-scaled-e1705522046455.jpeg?w=500&h=324&crop=1">
+          <source media="(max-width: 992px)"
+           srcset="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2024/01/AdobeStock_490555667-scaled-e1705522046455.jpeg?w=500&h=417&crop=1">
+          <img src="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2024/01/AdobeStock_490555667-scaled-e1705522046455.jpeg?w=500&h=324&crop=1" 
+        alt="" class="" />
+        </picture>
+      </a>
+      </div>
+  <div class="content-wrap">
+    <div class="content-inner">
+                        <a href="https://blogs.vmware.com/vsphere/product-news" class="category-label">Product Announcements</a>
+                    <h2 class="title"><a href="https://blogs.vmware.com/vsphere/2024/01/embracing-change-with-vmware-vsphere-foundation.html">Embracing Change with VMware vSphere Foundation</a></h2>
+                  <div class="entry-meta">
+                    <img class="avatar" src="//blogs.vmware.com/wp-content/uploads/sites/74/2016/07/Himanshu-Singh_avatar_1467917420-30x30.jpg" alt=""/>
+                <div class="author-list">
+                                    <a href="https://blogs.vmware.com/vsphere/author/himanshu_singh" rel="author" class="author">Himanshu Singh</a>
+                            </div>
+                <time class="updated" datetime="2024-01-17" pubdate>January 17, 2024</time>
+            </div>    </div>
+  </div>
+</article>
+        </div>
+       
+        <div class="col-12 col-md-4 stacked-posts">
+        
+<article class="card post-34673 post type-post status-publish format-standard has-post-thumbnail hentry category-product-news tag-1474 tag-announce tag-announcement tag-enterprise-workload-platform tag-explore tag-launch tag-vmware-explore tag-vsphere tag-vsphere-8">
+  <div class="image-wrap">
+          <a href="https://blogs.vmware.com/vsphere/2023/11/announcing-new-collaborations-in-vmware-private-ai.html" title="Announcing New Collaborations in VMware Private AI">
+        <picture>
+          <source media="(max-width: 768px)"
+            srcset="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2023/08/VMWX-23_D1_GS_SHOWFLOW_v3_0821_1pm-1.jpg?w=576&h=324&crop=1">
+          <source media="(max-width: 992px)"
+           srcset="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2023/08/VMWX-23_D1_GS_SHOWFLOW_v3_0821_1pm-1.jpg?w=752&h=423&crop=1">
+          <img src="https://blogs.vmware.com/vsphere/wp-content/uploads/sites/72/2023/08/VMWX-23_D1_GS_SHOWFLOW_v3_0821_1pm-1.jpg?w=576&h=324&crop=1" 
+        alt="" class="" />
+        </picture>
+      </a>
+      </div>
+  <div class="content-wrap">
+    <div class="content-inner">
+                        <a href="https://blogs.vmware.com/vsphere/product-news" class="category-label">Product Announcements</a>
+                    <h2 class="title"><a href="https://blogs.vmware.com/vsphere/2023/11/announcing-new-collaborations-in-vmware-private-ai.html">Announcing New Collaborations in VMware Private AI</a></h2>
+                  <div class="entry-meta">
+                    <img class="avatar" src="//blogs.vmware.com/wp-content/uploads/sites/72/2014/09/VSAN-Network-Graphic-30x30.png" alt=""/>
+                <div class="author-list">
+                                    <a href="https://blogs.vmware.com/vsphere/author/krishp" rel="author" class="author">Krish Prasad</a>
+                            </div>
+                <time class="updated" datetime="2023-11-07" pubdate>November 7, 2023</time>
+            </div>    </div>
+  </div>
+</article>
+        </div>
+          </div>
+  </div>
+      </article>
+                </main><!-- /.main -->
+      </div><!-- /.content -->
+    </div><!-- /.wrap -->
+    <footer class="content-info">
+  <div id="page-footer"></div>
+</footer>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/vsphere\/*"},{"not":{"href_matches":["\/vsphere\/wp-*.php","\/vsphere\/wp-admin\/*","\/vsphere\/wp-content\/uploads\/sites\/72\/*","\/vsphere\/wp-content\/*","\/vsphere\/wp-content\/plugins\/*","\/vsphere\/wp-content\/themes\/vmware-blog-1.9.8\/*","\/vsphere\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<div class="personalization_div_1" style="min-height: 1px;"></div><div class="personalization_div_2" style="min-height: 1px;"></div><link rel='stylesheet' id='all-css-0' href='https://blogs.vmware.com/vsphere/_static/??/wp-content/plugins/widget-countdown/includes/style/style.css,/wp-includes/css/dashicons.min.css,/wp-includes/js/thickbox/thickbox.css?m=1746040295' type='text/css' media='all' />
+<script type="text/javascript" id="uwpqsfscript-js-extra">
+/* <![CDATA[ */
+var ajax = {"url":"https:\/\/blogs.vmware.com\/vsphere\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://blogs.vmware.com/vsphere/_static/??/wp-content/plugins/ultimate-wp-query-search-filter/classes/scripts/uwpqsfscript.js,/wp-includes/js/dist/hooks.min.js?m=1746040295j" ></script><script type="text/javascript" src="https://blogs.vmware.com/vsphere/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+/* ]]> */
+</script>
+<script type="text/javascript" id="wp-parsely-loader-js-before">
+/* <![CDATA[ */
+window.wpParselySiteId = 'vmware.com';
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://blogs.vmware.com/vsphere/wp-content/mu-plugins/wp-parsely-3.18/build/loader.js?ver=ecf94842061bea03d54b" id="wp-parsely-loader-js"></script>
+<script type="text/javascript" data-parsely-site="vmware.com" src="https://cdn.parsely.com/keys/vmware.com/p.js?ver=3.18.1" id="parsely-cfg"></script>
+<script type="text/javascript" src="https://blogs.vmware.com/vsphere/wp-content/themes/vmware-blog-1.9.8/dist/scripts/main-32b354a4f2.js?m=1745601872g" ></script><script type="text/javascript" id="jetpack-stats-js-before">
+/* <![CDATA[ */
+_stq = window._stq || [];
+_stq.push([ "view", JSON.parse("{\"v\":\"ext\",\"blog\":\"240671562\",\"post\":\"34673\",\"tz\":\"-7\",\"srv\":\"blogs.vmware.com\",\"hp\":\"vip\",\"j\":\"1:14.5\"}") ]);
+_stq.push([ "clickTrackerInit", "240671562", "34673" ]);
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://stats.wp.com/e-202521.js" id="jetpack-stats-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="thickbox-js-extra">
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.","loadingAnimation":"https:\/\/blogs.vmware.com\/vsphere\/wp-includes\/js\/thickbox\/loadingAnimation.gif"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://blogs.vmware.com/vsphere/_static/??/wp-content/plugins/widget-countdown/includes/javascript/front_end_js.js,/wp-includes/js/thickbox/thickbox.js?m=1746040295j" ></script>
+    <script src="https://www.vmware.com/bin/vmware/template/scrapercontent.us.js" type="text/javascript" charset="UTF-8"></script>
+    <script src="https://www.vmware.com/content/dam/vmwaredesigns/scrapercontent/responsive.js" type="text/javascript" charset="UTF-8"></script>
+  </body>
+</html>

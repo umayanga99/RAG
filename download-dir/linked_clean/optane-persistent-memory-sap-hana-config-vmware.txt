@@ -1,0 +1,60 @@
+Memory and Storage Devices Powered by Intel
+Skip To Main Content
+The browser version you are using is not recommended for this site.
+Please consider upgrading to the latest version of your browser by clicking one of the following links.
+Safari
+Chrome
+Edge
+Firefox
+Storage Solutions
+Intel provides technically advanced products that support every level of computing—from data center workloads to enthusiast usage. Intel Storage Solutions empower customers to unlock exceptional storage performance and ensure data integrity, offering a cost-effective and scalable solution for intensive workloads. Built upon the latest Intel Xeon Scalable processor technologies, our product portfolio delivers enterprise-grade storage solutions for OEM and end users who seek data protection, extraordinary performance, and simplified IT operations.
+Intel® Virtual RAID on CPU (Intel® VROC)
+Intel® Volume Management Device (Intel® VMD)
+Intel® Optane™ SSDs
+Intel® Optane™ Persistent Memory
+Intel® Virtual RAID on CPU (Intel® VROC)
+Integrated RAID solution (hybrid features from hardware and software RAID) for improved performance and lower cost, without expensive RAID HBA hardware.
+Intel® Volume Management Device (Intel® VMD)
+Intel® Xeon® processor feature that enables direct control and management of NVMEs SSDs from the PCIe bus without Host Bus Adaptors (HBAs) bringing reliability, availability, and serviceability to enterprise storage systems.
+Intel® Optane™ SSDs
+Avoid data center bottlenecks while experiencing greater reliability and durability.
+Intel® Optane™ Persistent Memory
+Experience breakthrough performance at an affordable cost, with a large, new memory tier in data center architecture.
+Intel® Storage Engines Improve Storage Performance, CPU Efficiency, and Throughput
+Free up your CPUs for business-critical workloads while meeting growing storage demands, with built-in accelerators on Intel® Xeon® Scalable processors.
+Explore Intel® Storage Engines
+ADR (Asynchronous DRAM Refresh)
+In the event of AC power supply failure, ADR preserves key data in the battery backed DRAM.
+NTB (Non-Transparent Bridge)
+High BW PCIe based link b/t two processors to implement High Availability.
+Intel® Volume Management Device (Intel® VMD)
+PCIe End Point integrated in root complex to provide virtual HBA functionality for NVMe SSD such as surprise hot-plug, LED management.
+PCIe dual-cast
+Copying PCIe package from one ingress port to two egress ports. Allowing for higher performance storage, especially mirroring write cache to two nodes.
+Intel® QuickAssist Technology (Intel® QAT)
+Crypto and compression. Was in PCH before. Integrated to CPU and will be called QAT 4.0 on 4th Gen Intel® Xeon® Scalable processors.
+ECRC (End-to-End CRC)
+ECRC is carried forward by PCIe switch. Only checked when reach final destination PCIe End Point.
+Intel® Data Streaming Accelerator (Intel® DSA)
+Offload data movement in memory. Source/destination can be memory or MMIO. Was called CBDMA. Will be integrated to CPU and called DSA 1.0 in 4th Gen Intel® Xeon® Scalable processors.
+Intel® Virtual RAID on CPU
+Today's all-NVMe storage systems require a new architecture where traditional HBA architecture no longer meets the demanding workload requirements. Intel® Virtual RAID on CPU (Intel® VROC) is an enterprise-grade, integrated RAID solution on Intel® Xeon® Processors that eliminates the need for an external RAID HBA. Intel® VROC takes the robust functionality and enterprise quality of hardware RAID and combines it with the flexibility and upgradability of software RAID.
+Learn more about Intel® VROC
+Intel® Volume Management Device
+Intel® VMD is an Intel® Xeon® Scalable processor feature that enables direct control and management of NVMe SSDs from the PCIe bus without additional hardware adaptors. This robust NVMe SSD functionality allows a seamless transition to NVMe storage while limiting the downtime of critical infrastructure. Intel® VMD brings enterprise reliability, availability, and serviceability (RAS) features to NVMe SSDs, enabling you to deploy next-generation storage with confidence.
+Learn more about Intel® VMD
+Intel® Solid State Drive Technology
+Learn about the technology that powers Intel® Solid State Drives.
+Intel® Optane™ Technology
+Intel® Optane™ technology cost-effectively addresses the performance and capacity gaps that exist between DRAM and NAND storage. These revolutionary memory and storage products provide an affordable, reliable solution for enabling data center and cloud applications with the capacity and performance needed to accommodate the coming generation of data demands.
+Learn more
+Intel® Optane™ Persistent Memory
+Intel® Optane™ persistent memory (PMem) modules can increase system memory to previously unattainable capacities at lower cost compared to DRAM without compromising performance.
+Read more
+Intel® Optane™ SSDs
+Intel® Optane™ Solid State Drives (SSDs) offer high performance and low latency to break through the traditional legacy storage bottlenecks, accelerate time to data-insights, and enable more work per server.
+Learn more
+Show more
+Show less
+Compare Products
+Get Help

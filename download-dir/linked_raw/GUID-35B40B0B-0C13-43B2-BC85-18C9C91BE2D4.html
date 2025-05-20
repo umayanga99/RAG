@@ -1,0 +1,1035 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html  lang="en">
+
+
+
+
+ 
+
+
+<head>
+
+<meta name="description" content="vSphere Networking provides information about configuring networking for VMware vSphere , including how to create vSphere distributed switches and vSphere standard switches.">
+
+
+
+
+    
+<!--
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call=""/>
+  -->
+<!-- OneTrust Cookies Consent Notice start for broadcom-aem-dev-pub1.herodigital.com -->
+
+
+
+    <script defer="defer" type="text/javascript" src="https://rum.hlx.page/.rum/@adobe/helix-rum-js@%5E2/dist/rum-standalone.js" data-routing="env=prod,tier=publish,ams=Broadcom Corporation TechDocs2" integrity="" crossorigin="anonymous" data-enhancer-version="" data-enhancer-hash=""></script>
+<script src="" type="text/javascript" charset="UTF-8" nonce="brcmtd2409pThL2s9R8o9Q=="></script>
+
+    <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="6a5fee8c-80be-4b9a-ab7e-b607e3f8ad3e" nonce="brcmtd2409pThL2s9R8o9Q=="></script>
+
+    <script type="text/javascript" nonce="brcmtd2409pThL2s9R8o9Q==">
+        function OptanonWrapper() {
+            var targettingCookiesEnabled = false;
+            var functoinCookeisEnabled = false;
+            if (OnetrustActiveGroups) {
+                var split = OnetrustActiveGroups.split(',');
+                for (var i = 0; i < split.length; i++) {
+                    if (split[i] === 4 || split[i] === '4') {
+                        targettingCookiesEnabled = true;
+                    }
+                }
+            }
+
+            if (targettingCookiesEnabled) {
+                $('.onetrust-message-4').removeClass('hidden');
+                $('.onetrust-message-4').addClass('hidden');
+
+                $('object[data-onetrust]').each(function(index, elem) {
+                    var attrVal = $(this).attr('data-onetrust');
+                    $(this).attr('data', attrVal);
+                    $(this).removeAttr('data-onetrust');
+                })
+            } else {
+                $('.onetrust-message-4').removeClass('hidden');
+
+                $('object[data]').each(function(index, elem) {
+                    var attrVal = $(this).attr('data');
+                    $(this).attr('data-onetrust', attrVal);
+                    $(this).removeAttr('data');
+                })
+            }
+        }
+    </script>
+
+<!-- OneTrust Cookies Consent Notice end for broadcom-aem-dev-pub1.herodigital.com -->
+
+<base href="#"/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+
+
+<title>vSphere Networking</title>
+
+<!-- <sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" data-sly-call=""/> -->
+
+
+
+
+    
+    
+<link rel="stylesheet" href="/etc.clientlibs/broadcom/techdocs2/clientlibs/clientlib-site.min.6205cc39f9208becda8d4ee8a3c0403a.css" type="text/css"/>
+<link rel="stylesheet" href="/etc.clientlibs/broadcom/techdocs2/clientlibs/clientlib-base.min.5655e74b95003532feb02ca2297dba89.css" type="text/css"/>
+
+
+
+
+
+
+
+
+<!-- <sly data-sly-use.pathChecker="broadcom.core.models.PathChecker">
+
+    <sly data-sly-test="">
+        <sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
+             data-sly-call="org.apache.sling.scripting.sightly.libs.granite.sightly.templates.clientlib__002e__html$2@7e896167"/>
+    </sly>
+
+    <sly data-sly-test="true">
+        <sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
+             data-sly-call="org.apache.sling.scripting.sightly.libs.granite.sightly.templates.clientlib__002e__html$2@7e896167"/>
+    </sly>
+
+</sly> -->
+
+<!--/* Include Context Hub */
+<sly data-sly-resource="contexthub"/>
+-->
+
+
+
+	<script type="application/ld+json" nonce="brcmtd2409pThL2s9R8o9Q==">
+        {"spacename":"VMware vSphere 7.0","keywords":"","@type":"Article","author":"CA Inc","alternateName":"","dateModified":"Fri May 09 2025 08:50:43 GMT+0000","language":"en","mainEntityOfPage":{"@type":"Webpage","URL":"/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0"},"@context":"http://schema.org","url":"/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0","datePublished":"2025-05-09T09:14:48.205Z","spacekey":"","currentpagetitle":"vSphere Networking","appname":[],"appid":[],"name":"vSphere Networking","siteversion":"7-0","publisher":{"@type":"Organization","name":"CA INC","logo":{"@type":"ImageObject","url":"https://static.broadcom.com/static/css/img/logo-broadcom-bw.png"}},"productname":"VMware vSphere","searchurl":"/us/en/vmware-cis/vsphere/vsphere/7-0/search.html","supportid":["1600801","1600574"],"ux-context-string":[],"headline":"vSphere Networking"}
+
+     </script>
+
+
+
+<script id="gtmScript" nonce="brcmtd2409pThL2s9R8o9Q==" data-nonce="brcmtd2409pThL2s9R8o9Q==" class="optanon-category-2">
+    (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; var n = d.querySelector('[nonce]');
+        n && j.setAttribute('nonce', n.nonce || n.getAttribute('nonce')); f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KF7XWD');
+</script>
+
+
+
+
+
+
+
+ 
+	
+<!-- <sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html">
+    <sly data-sly-call=""/> -->
+
+
+    
+        
+    
+
+
+
+             <script src="/etc.clientlibs/aem-site-template-dxml/broadcom/techdocs2/granite/jquery.min.3e24d4d067ac58228b5004abb50344ef.js"></script>
+             <script src="/etc.clientlibs/aem-site-template-dxml/broadcom/techdocs2/granite/utils.min.3b86602c4e1e0b41d9673f674a75cd4b.js"></script>
+     <script src="/etc.clientlibs/aem-site-template-dxml/broadcom/techdocs2/granite/jquery/granite.min.011c0fc0d0cf131bdff879743a353002.js"></script>
+             <script src="/etc.clientlibs/broadcom/techdocs2/clientlibs/clientlib-site.min.c805a7c603907f76c83cad12136a7892.js"></script>
+             <script src="/etc.clientlibs/broadcom/techdocs2/clientlibs/clientlib-base.min.9c6ecf37abe41edeafa6651ab84195d8.js"></script>
+    
+    
+        
+
+
+    <script src="https://searchunify.broadcom.com/resources/Allow/an.js?uid=e95e476a-e759-11ea-beba-0242ac12000b" type="text/plain" class="optanon-category-2" charset="UTF-8" nonce="brcmtd2409pThL2s9R8o9Q=="></script>
+ 
+</head>
+
+
+
+
+
+
+
+
+          
+
+
+
+
+<body class="">
+
+   <div class="gtm-noscript">
+
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KF7XWD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+</div>
+
+   <input type="hidden" data-path="/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0" id="connectorsPath"/>
+   <input type="hidden" data-path="2025-05-09T08:50:43.132Z" id="lastmodified"/>
+   <!-- Modified Code -->
+   <div class="header">    <header class="bc-ang-header" role="banner">
+	<div class="container-fluid">
+		<div class="position-relative">
+			<nav class="navbar navbar-expand-lg navbar-light dropdown" role="navigation">
+				<div class="navbar-brand-wrapper">
+					<button class="fa fa-bars toggle-menu d-block d-lg-none" id="mobileMenuToggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03, #header-search-control" aria-controls="navbarTogglerDemo03 header-search-control" aria-expanded="false" aria-label="Toggle navigation">
+						<span>MENU</span>
+					</button>
+					<a class="navbar-brand" href="https://www.broadcom.com" aria-label="Broadcom"></a>
+				</div>
+				
+					
+						<div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+
+							<ul class="navbar-nav">
+
+								
+									<li class="nav-item">
+										<a class="nav-link" href="https://www.broadcom.com/products/">Products</a>
+									</li>
+								
+									<li class="nav-item">
+										<a class="nav-link" href="https://www.broadcom.com/solutions/">Solutions</a>
+									</li>
+								
+									<li class="nav-item">
+										<a class="nav-link" href="https://www.broadcom.com/support/">Support and Services</a>
+									</li>
+								
+									<li class="nav-item">
+										<a class="nav-link" href="https://www.broadcom.com/company/">Company</a>
+									</li>
+								
+									<li class="nav-item">
+										<a class="nav-link" href="https://www.broadcom.com/how-to-buy/">How To Buy</a>
+									</li>
+								
+								<li class="nav-item d-lg-none mt-3 mob-login loggedOutUser">
+									
+										<div class="dropdown">
+											<button class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Login
+											</button>
+											<div class="dropdown-menu">
+												<div class="dropdown-wrapper">
+													<div class="my-account">myBroadcom Account:</div>
+													<div class="login-btn-wrapper">
+														<a class="btn btn-login" href="https://access.broadcom.com/default/saml/v1/idp/login?appId=bee0d0aa-6aa9-4dbf-a48d-dd47cf0dd8a0">Login</a>
+														<a class="btn btn-register" href="https://profile.broadcom.com/web/registration">Register</a>
+													</div>
+													<div>
+														<a class="forgot-pswd" href="https://profile.broadcom.com/web/forgot-password">Forgot
+															Username/Password?</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									
+								</li>
+								<li class="nav-item d-lg-none mt-3 mob-login loggedInUser">
+									<div class="dropdown">
+										<button class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Username
+										</button>
+										<div class="dropdown-menu">
+											<a class="dropdown-item" href="https://portal.broadcom.com/group/user/editprofile">Edit My
+												Profile</a>
+											<a class="dropdown-item" href="https://support.broadcom.com/user/user_redirect?dest=user">myBroadcom</a>
+											
+												<a href="/system/sling/logout.html" class="btn btn-default">Logout</a>
+											
+										</div>
+									</div>
+								</li>
+								<li class="nav-item d-block d-lg-none mob-langselector">
+									<div class="dropdown">
+										<button class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Language
+										</button>
+										<div class="dropdown-menu">
+											<ul class="language-selector-list">
+												<li>
+													<a href="https://www.broadcom.com">
+														English
+													</a>
+												</li>
+												<li>
+													<a href="https://jp.broadcom.com">
+														日本語
+													</a>
+												</li>
+												<li>
+													<a href="https://www.broadcom.cn">
+														中文
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+							</ul>
+				</div>
+				<div class="menu-bg"></div>
+				<nav class="secondary-nav d-none d-lg-block">
+					<ul class="nav nav-stacked">
+						<!-- Login -->
+						<li class="dropdown login loggedOutUser">
+							
+								<button class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Login
+								</button>
+								<div class="dropdown-menu">
+									<div class="dropdown-wrapper">
+										<div class="my-account">myBroadcom Account:</div>
+										<div class="login-btn-wrapper">
+											<a class="btn btn-login" href="https://access.broadcom.com/default/saml/v1/idp/login?appId=bee0d0aa-6aa9-4dbf-a48d-dd47cf0dd8a0">Login</a>
+											<a class="btn btn-register" href="https://profile.broadcom.com/web/registration">Register</a>
+										</div>
+										<div>
+											<a class="forgot-pswd" href="https://profile.broadcom.com/web/forgot-password">Forgot
+												Username/Password?</a>
+										</div>
+									</div>
+								</div>
+							
+						</li>
+						<li class="dropdown loggedInUser">
+							<button type="button" tabindex="0" class="dropdown-toggle showUserName" data-bs-toggle="dropdown" aria-expanded="false">Username
+							</button>
+							<div class="dropdown-menu language">
+								<a class="dropdown-item" href="https://portal.broadcom.com/group/user/editprofile">Edit My
+									Profile</a>
+								<a class="dropdown-item" href="https://support.broadcom.com/user/user_redirect?dest=user">myBroadcom</a>
+								
+									<a class="dropdown-item mb-3" tabindex="0" href="/system/sling/logout.html">
+										Logout
+									</a>
+								
+							</div>
+						</li>
+						<!-- End of Login -->
+						<li class="dropdown">
+							<button type="button" tabindex="0" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">English</button>
+							<div class="dropdown-menu language">
+								<a class="dropdown-item mb-3" tabindex="0" href="https://jp.broadcom.com" lang="ja">
+									<span class="d-block d-lg-none fa fa-check-circle"></span>
+									日本語
+								</a>
+								<a class="dropdown-item" tabindex="0" href="https://www.broadcom.cn" lang="zh">
+									<span class="d-block d-lg-none fa fa-check-circle"></span>
+									中文
+								</a>
+							</div>
+						</li>
+					</ul>
+						
+				</nav>
+				
+						
+				
+					
+						
+							<input type="hidden" id="ajaxSearchLink" value="https://api.swiftype.com/api/v1/public/engines/suggest.json?callback=jQuery111108956332510755289_1550482155945&amp;q={query}&amp;engine_key=-YxE_JXFEvU4sfy-biZV&amp;filters%5Bpages%5D%5BAssetType%5D=AVG_Product_C&amp;filters%5Bpages%5D%5Blocale%5D=avg_en&amp;_=1550482155946"/>
+						
+					
+				
+				
+					
+						
+							<form class="form-inline d-lg-block predictive-search-form collapse" id="header-search-control" role="search" method="GET" action="https://www.broadcom.com/site-search">
+								<div class="autocomplete">
+									<input class="form-control predictive-search" type="search" placeholder="SEARCH" aria-label="Search" id="bcAppSearch" name="q" autocomplete="off"/>
+									<button role="button" aria-label="Search" class="fa fa-search my-sm-0" type="submit"></button>
+								</div>
+							</form>
+							<form class="form-inline my-2 pt-lg-3 predictive-search-form d-none" id="bcAppMobSearchForm" role="search" method="GET" action="https://www.broadcom.com/site-search">
+								<div class="autocomplete">
+									<div class="dropdown">
+										<button role="button" aria-label="Search" class="fa fa-search my-2 my-sm-0 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"></button>
+										<div class="dropdown-menu">
+											<input class="form-control predictive-search" type="search" placeholder="Search" aria-label="Search" id="bcAppMobSearch" name="q" autocomplete="off"/>
+										</div>
+									</div>
+								</div>
+							</form>
+						
+					
+				
+			</nav>
+		</div>
+	</div>
+</header></div>
+
+   
+   <div class="container">
+      <div class="product-search-topic-header">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-12">
+                  <div class="breadcrumb_navigation_links breadcrumb-navigation-links">
+    <div class="d-flex">
+        
+        <nav aria-label="Breadcrumb" class="bc-nav">
+            <ul class="d-flex flex-wrap">
+                <li><a class="d-flex align-items-center" href="/"><span class="bc-home-icon"></span><span class="sr-only">Home</span></a></li>
+                
+                    <li>
+                        <a href="/us/en/vmware-cis.html">VMware® Cloud Infrastructure Software</a>
+                    </li>
+                
+                    <li>
+                        <a href="/us/en/vmware-cis/vsphere.html">VMware vSphere</a>
+                    </li>
+                
+                    <li>
+                        <a href="/us/en/vmware-cis/vsphere/vsphere/7-0.html">VMware vSphere 7.0</a>
+                    </li>
+                
+                    <li>
+                        <a href="/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0.html">vSphere Networking</a>
+                    </li>
+                
+            </ul>
+        </nav>
+            
+    </div>
+
+</div>
+
+               </div>
+               <div class="topic-header"><div class="topic-header-inner">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 topic-header-inner__wrapper px-0">
+                <div class="topic-header-inner__title">
+                    
+
+
+
+<div class="title-banner">
+
+    <h1 tabindex="0">
+        
+    <a class="col-lg-12 px-0" href="/us/en/vmware-cis/vsphere/vsphere/7-0.html">VMware vSphere 7.0</a>
+    
+	
+    </h1>
+</div>
+
+
+
+                </div>
+                <div class="topic-header-inner__utility">
+                    
+
+
+                    <div class="col-12 no-pad-right">
+<div class="dropdown bc-version-dropdown">
+
+
+  <button class="btn btn-lg dropdown-toggle bc-version-dropdown-btn" data-versionid="7.0" type="button" id="version-dropdown-btn" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="dropdown-text">Version</span>
+  </button>
+  <div class="dropdown-menu" aria-labelledby="version-dropdown-btn">
+
+	
+	
+     <a class="dropdown-item" href="/us/en/vmware-cis/vsphere/vsphere/8-0.html">8.0</a>
+	
+  	
+	
+     <a class="dropdown-item" href="/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0.html">7.0</a>
+	
+  	
+	
+     <a class="dropdown-item" href="/us/en/vmware-cis/vsphere/vsphere/6-7.html">6.7</a>
+	
+  	
+	
+     <a class="dropdown-item" href="/us/en/vmware-cis/vsphere/vsphere/6-5.html">6.5</a>
+	
+  	
+
+  </div>
+  
+  
+</div>
+</div>
+
+                    
+    
+
+        <div class="col-12 no-pad-right">
+            <div class="dropdown bc-language-dropdown">
+
+                <button class="btn btn-lg dropdown-toggle bc-language-dropdown-btn" data-languageid="English" type="button" id="language-dropdown-btn" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="dropdown-text">Language</span>
+                </button>
+
+                <div class="dropdown-menu" aria-labelledby="language-dropdown-btn">
+                    
+                    
+                        <a class="dropdown-item" href="/cn/zh-cn/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0.html">简体中文</a>
+                    
+                    
+                    
+                        <a class="dropdown-item" href="/de/de/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0.html">Deutsch</a>
+                    
+                    
+                    
+                        <a class="dropdown-item" href="/es/es/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0.html">Español</a>
+                    
+                    
+                    
+                        <a class="dropdown-item" href="/fr/fr/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0.html">Français</a>
+                    
+                    
+                    
+                        <a class="dropdown-item" href="/jp/ja/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0.html">日本語</a>
+                    
+                    
+                    
+                        <a class="dropdown-item" href="/kr/ko/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0.html">한국어</a>
+                    
+                    
+                    
+                        <a class="dropdown-item" href="/tw/zh-tw/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0.html">繁體中文</a>
+                    
+                    
+                    
+                        <a class="dropdown-item" href="/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0.html">English</a>
+                    
+                    
+                </div>
+
+            </div>
+        </div>
+    
+
+
+                    <div class="product-landing-search-wrapper">
+    
+
+         
+         <script type="text/javascript">
+             var isTD2 = true;  // Ensure you access the correct property
+        </script>
+
+    
+
+
+        <form action="/us/en/vmware-cis/vsphere/vsphere/7-0/search.html" method="GET" class="product-landing-search-form" role="search" data-call-analytics="true">
+            <button type="submit" aria-label="Search" class="fa fa-search product-landing-search-icon"></button>
+            <input type="text" id="product-landing-search" name="q" placeholder="Search this product" aria-label="Search this product. When autocomplete results are available use up and down arrows to review and enter to select." autocomplete="off" data-searchlink="/content/broadcom/techdocs/us/en/vmware-cis/vsphere/vsphere/7-0/search.html" data-siteTitle="VMware vSphere 7.0"  data-pageName="vSphere Networking"/>
+        </form>
+    
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="topic-full-width">
+    </div>
+</div></div>
+
+            </div>
+         </div>
+      </div>
+      <div class='row'>
+         <div class="col-12 col-lg-3 product-landing-left-nav is-active">
+            <div class="leftnav-toggle">
+               <button class="toggle-sidebar is-active">
+               <span class="sr-only">Open/Close Topics Navigation</span>
+               </button>
+            </div>
+            <div class="dropdown left-content-mobile">
+               <button type="button" class="btn dropdown-toggle show-left-content-mobile d-block d-lg-none" data-bs-toggle="dropdown">
+               Product Menu
+               <span class="fa fa-chevron-down float-right"></span>
+               </button>
+               <div class="dropdown-menu">
+                  <div class="toc tableofcontentsmod tableofcontents">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
+
+
+
+
+    <!-- <link rel="stylesheet" href="/etc.clientlibs/fmdita/clientlibs/rhjs.min.css" type="text/css"/>
+<link rel="stylesheet" href="/etc.clientlibs/fmdita/clientlibs/siteoutput/default/tableofcontents.min.css" type="text/css"/>
+<script src="/etc.clientlibs/fmdita/clientlibs/rhjs.min.js"></script>
+<script src="/etc.clientlibs/fmdita/clientlibs/siteoutput/default/tableofcontents.min.js"></script>
+ -->
+    
+    <div class="tocContainer" data-rhwidget="Basic" role="navigation">
+      <h3 class="tocContainer__title">Topics</h3>
+      <div class="loader"></div>
+        <ul id="accordion" class="tocList" aria-label="Table of Contents Accordion"></ul>
+        <script type="text/javascript" nonce="brcmtd2409pThL2s9R8o9Q==">
+             var tocServletPath = '/bin/broadcom/techdocs2/TOCServlet';
+            $('tocList').hide();
+            $.getJSON(tocServletPath,{basePath:'/content/broadcom/techdocs/us/en/vmware-cis/vsphere/vsphere/7-0'},function(data, textStatus, jqXHR) {
+
+                createTOCLoop(data, "accordion");
+
+                $('.tocList').html(tocElement);
+                $('.loader').hide();
+                $('.tocList').show();
+
+                $('.tocList .collapse').on('shown.bs.collapse', function (e) {
+
+                    if ($(this).is(e.target)){
+                        $(this).attr("aria-current", true);
+                        $(this).parent('li').addClass('active-acc');
+                        $('ul.show').last().find('li.active-acc').addClass('has-border');
+                        $(this).parent('li').children('a').last().removeClass('fa-plus').addClass('fa-minus');
+                    }
+                });
+
+                $('.tocList .collapse').on('hidden.bs.collapse', function (e) {
+
+                    if($(this).is(e.target)){
+                        $(this).removeAttr("aria-current");
+                        $(this).parent('li').removeClass('active-acc');
+                        $(this).parent('li').children('a').last().removeClass('fa-minus').addClass('fa-plus');
+                    }
+                });
+
+                collapseAndSelectCurrentPageAtTOC();
+                leftNavScrollTimer = setInterval(leftNavScroll, 300);
+            });
+
+            var tocElement = '';
+            function createTOCLoop (thisArray, referParentID) {
+
+                $.each(thisArray, function(index, value) {
+                  
+                    var htmlItemTitle = value.title.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+                    var htmlItemLink = value.link;
+
+                    if(value.children.length <= 0) {
+                        if(referParentID == "accordion") {
+                            tocElement += '<li class="parent"><a class="toc-title col-12" href="'+ htmlItemLink +'"><span>' + htmlItemTitle + '</span></a>';
+                        } else {
+                            tocElement += '<li><a class="toc-title col-12" href="'+htmlItemLink+'"><span>' + htmlItemTitle + '</span></a>';
+                        }
+                    }
+                    else if(value.children.length > 0) {
+                        if(referParentID == "accordion") {
+                            tocElement += '<li class="parent"><a class="toc-title col-9 col-lg-8" href="'+htmlItemLink+'">' + htmlItemTitle + '</a><a tabindex="0" aria-label="' + htmlItemTitle + '" role="button" class="col-1 fa fa-plus toc-arrow" aria-label="Click to Expand" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#toc'+frameid(htmlItemLink+''+htmlItemTitle)+'" href="#toc'+frameid(htmlItemLink+''+htmlItemTitle)+'"></a><ul data-parent="#'+ referParentID +'" class="collapse" id="toc'+frameid(htmlItemLink+''+htmlItemTitle)+'">';
+                        } else {
+                            tocElement += '<li><a class="toc-title col-9 col-lg-8" href="'+htmlItemLink+'">' + htmlItemTitle + '</a><a tabindex="0" aria-label="' + htmlItemTitle + '" role="button" class="col-1 fa fa-plus toc-arrow" aria-label="Click to Expand" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#toc'+frameid(htmlItemLink+''+htmlItemTitle)+'" href="#toc'+frameid(htmlItemLink+''+htmlItemTitle)+'"></a><ul data-parent="#'+ referParentID +'" class="collapse" id="toc'+frameid(htmlItemLink+''+htmlItemTitle)+'">';
+                        }
+                        createTOCLoop(value.children, ""+("toc"+frameid(htmlItemLink+''+htmlItemTitle)));
+                        tocElement += '</ul>';
+                    }
+                    tocElement += '</li>';
+                });
+            }
+
+            function frameid (id) {
+                var strid = id.replace(/[^\w\s]/gi, '').split("_").join("").split(" ").join("");
+                return strid;
+            }
+
+            var leftNavScrollTimer;
+
+            function leftNavScroll() {
+                if($('ul.show').last().find('li.active-acc.has-border').length > 0){
+                    document.getElementsByClassName("toc tableofcontentsmod tableofcontents")[0].scrollTop = $('ul.show').last().find('li.active-acc.has-border')[0].offsetTop -100;
+                    clearLeftNavScrollTimer();
+                }else{
+                    if($('ul.tocList').last().find('li.active-acc.has-border').length > 0){
+                        document.getElementsByClassName("toc tableofcontentsmod tableofcontents")[0].scrollTop = $('ul.tocList').last().find('li.active-acc.has-border')[0].offsetTop -100;
+                        clearLeftNavScrollTimer();
+                    }else if($('ul.tocList').last().find('li.active-acc').length > 0){
+                        document.getElementsByClassName("toc tableofcontentsmod tableofcontents")[0].scrollTop = $('ul.tocList').last().find('li.active-acc')[0].offsetTop -100;
+                        clearLeftNavScrollTimer();
+                    }
+                }
+            }
+
+            function clearLeftNavScrollTimer() {
+              clearInterval(leftNavScrollTimer);
+            }
+
+            function collapseAndSelectCurrentPageAtTOC(){
+                var currentPagePath = window.location.pathname + window.location.hash;
+                var currentPagePathSplit = currentPagePath.split(['#']);
+                currentPagePath = currentPagePathSplit[0];
+
+                if(currentPagePath.startsWith("/content/broadcom/techdocs")){
+                    currentPagePath = currentPagePath.split("/content/broadcom/techdocs")[1];
+                }
+
+                $(".toc-title").each(function(index, tocElement) {
+                    var thisHref = $(this).attr("href");
+                    var thisHrefSplit = thisHref.split(['#']);
+                    thisHref = thisHrefSplit[0];
+
+
+
+                    $(this).removeClass('active-acc');
+
+                    if(thisHref === currentPagePath) {
+                        $(this).attr("aria-current", true);
+                        $(this).closest(".parent").addClass("active-acc");
+                        $(this).parents(".collapse").collapse('show');
+                        //$(this).parents(".collapse").parents("li").addClass("active-acc");
+                        $(this).parents("li").addClass("active-acc");
+                        $(".active-acc").children(".collapse").each(function(index, child){
+                            $(this).collapse('show');
+                        });
+
+                        $('li.active-acc').each(function () {
+                            if ($(this).children('ul').length > 0) {
+                                $(this).removeClass('has-border');
+                                $(this).addClass('remove-border');
+                            }
+                        })
+
+                    }
+
+                });
+
+            }
+      	</script>
+    </div>
+
+</div>
+
+               </div>
+            </div>
+         </div>
+         <div class="col-12 col-lg-8 offset-lg-1 product-detail px-lg-0">
+            <!-- Include Template Header -->
+            <main class="clearfix">
+               <section id="section">
+                  <!-- Topic Header
+                     
+
+
+
+
+
+          
+
+
+
+
+<div class="topicheader">
+  <div class="breadcrumb"></div>
+  <div class="mobile-open-toc-button"></div>
+  
+</div>
+                     -->
+                  <div class="par parsys">
+                     <div class="topic section">
+                        <!-- Topic Content -->
+                        <div class="contentnode parsys"><div class="topic section">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="topic topic concept" id="GUID-99D2EB6D-547B-4977-8B76-0A7408453322-en" >
+
+    <h1 class="title"><div  style="display: inline;">vSphere Networking</div></h1>
+
+    <div id="GUID-99D2EB6D-547B-4977-8B76-0A7408453322-en_SHORTDESC_84B9C32C4B604FFE9F9FFF7500B47E83" class="shortdesc"><div  style="display: inline;"><cite id="GUID-99D2EB6D-547B-4977-8B76-0A7408453322-en_CITE_5E42E4C381694B4BA6A58CA8DDFFB100" class="cite"><div  style="display: inline;">vSphere Networking</div></cite> provides information about configuring networking for VMware vSphere<span  class="tm" >®</span>, including how to create vSphere distributed switches and vSphere standard switches. </div></div>
+
+    <div  style="display: inline;"><div id="GUID-99D2EB6D-547B-4977-8B76-0A7408453322-en_P_054948780FFB419C91B50A9A6D8B591D" class="p"><div  style="display: inline;"><cite id="GUID-99D2EB6D-547B-4977-8B76-0A7408453322-en_CITE_6A43BD7C63DB4467A9833EDA4DB516C9" class="cite"><div  style="display: inline;">vSphere Networking</div></cite> also provides information on monitoring networks, managing network resources, and networking best practices. </div></div><section id="GUID-99D2EB6D-547B-4977-8B76-0A7408453322-en_GUID-257AD916-4A07-4A34-B3EC-AF1BFD3E8DF0" class="section"><div  style="display: inline;"><h2 id="GUID-99D2EB6D-547B-4977-8B76-0A7408453322-en_GUID-094E7264-FE27-4869-9370-FF0A4A460BB3" class="title"><div  style="display: inline;">Intended Audience</div></h2>
+      
+      <div id="GUID-99D2EB6D-547B-4977-8B76-0A7408453322-en_P_5FD5746A1B1B4F7FB53F454465798193" class="p"><div  style="display: inline;">The information presented is written for experienced Windows or Linux system administrators who are familiar with network configuration and virtual machine technology. </div></div></div></section><section id="GUID-99D2EB6D-547B-4977-8B76-0A7408453322-en_section_9F973023496141AC8D4EDE8BDD98833B" class="section"><div  style="display: inline;"><h2 id="GUID-99D2EB6D-547B-4977-8B76-0A7408453322-en_title_3CBD0294FF404BB394BD9CE4C68936FF" class="title"><div  style="display: inline;"><span class="ph"><div  style="display: inline;">vSphere Web Client</div></span> and <span class="ph"><div  style="display: inline;">vSphere Client</div></span></div></h2>
+      <div id="GUID-99D2EB6D-547B-4977-8B76-0A7408453322-en_p_3869925AEFBA4A99B80479D91E25E9E4" class="p"><div  style="display: inline;">Instructions in this guide reflect the <span class="ph"><div  style="display: inline;">vSphere Client</div></span> (an HTML5-based GUI). You can also use the instructions to perform the tasks by using the <span class="ph"><div  style="display: inline;">vSphere Web Client</div></span> (a Flex-based GUI). </div></div><div id="GUID-99D2EB6D-547B-4977-8B76-0A7408453322-en_p_8046BBE70F9C4FA6800A9954D454224E" class="p"><div  style="display: inline;">Tasks for which the workflow differs significantly between the <span class="ph"><div  style="display: inline;">vSphere Client</div></span> and the <span class="ph"><div  style="display: inline;">vSphere Web Client</div></span> have duplicate procedures that provide steps according to the respective client interface. The procedures that relate to the <span class="ph"><div  style="display: inline;">vSphere Web Client</div></span>, contain <span class="ph"><div  style="display: inline;">vSphere Web Client</div></span> in the title. </div></div><div id="GUID-99D2EB6D-547B-4977-8B76-0A7408453322-en_p_7291DAE8AD4149559C6B8333BDC34E56" class="p"><div  style="display: inline;"><div class="note" data-label="NOTE"> <div  style="display: inline;">In vSphere 6.7 Update 1, almost all of the <span class="ph"><div  style="display: inline;">vSphere Web Client</div></span> functionality is implemented in the <span class="ph"><div  style="display: inline;">vSphere Client</div></span>. For an up-to-date list of any remaining unsupported functionality, see <a class="xref" href="http://www.vmware.com/info?id=1413" title="" data-scope="external" data-format="http" data-type="" target="_blank">Functionality Updates for the vSphere Client</a>. </div></div></div></div></div></section></div>
+
+    
+
+
+
+
+
+
+
+
+
+
+<div class="linklist relatedlinks" data-label="Related information" ><div><div class="linkpool linklist">
+
+
+
+
+
+
+
+
+<div data-scope="" data-format="" data-type="" ><div class="linkpool linklist">
+
+
+
+
+
+
+
+
+<div data-scope="" data-format="" data-type="" ><a class="link" href="/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0/updated-information-vsphere-7-0-networking.html" title="This vSphere Networking is updated with each release of the product or         when necessary." data-scope="local" data-format="dita" data-type="concept" target="_self"><span class="linktext"><div  style="display: inline;">Updated Information</div></span></a><a class="link" href="/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0/introduction-to-vsphere-networking.html" title=" Get to know the 	 basic concepts of vSphere networking and how to set up and configure a network 	 in a vSphere environment.   " data-scope="local" data-format="dita" data-type="concept" target="_self"><span class="linktext"><div  style="display: inline;">Introduction to vSphere Networking</div></span></a><a class="link" href="/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0/setting-up-networking-with-vnetwork-standard-switches.html" title="vSphere standard switches handle network traffic at the host level in a vSphere deployment." data-scope="local" data-format="dita" data-type="concept" target="_self"><span class="linktext"><div  style="display: inline;">Setting Up Networking with vSphere Standard Switches</div></span></a><a class="link" href="/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0/basic-networking-with-vnetwork-distributed-switches.html" title="  With vSphere distributed switches you can set up and configure networking in a vSphere environment." data-scope="local" data-format="dita" data-type="concept" target="_self"><span class="linktext"><div  style="display: inline;">Setting Up Networking with vSphere Distributed Switches</div></span></a><a class="link" href="/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0/setting-up-vmkernel-networking.html" title="You set up 	 VMkernel adapters to provide network connectivity to hosts and to accommodate 	 system traffic of vMotion, IP storage, Fault Tolerance logging,  	 vSAN, and so on.    " data-scope="local" data-format="dita" data-type="concept" target="_self"><span class="linktext"><div  style="display: inline;">Setting Up VMkernel Networking</div></span></a><a class="link" href="/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0/configuring-lacp-on-a-vsphere-distrubuted-switch-in-the-vsphere-web-client.html" title="With link aggregation control protocol 		(LACP) support on a vSphere Distributed Switch, you can connect ESXi hosts to physical 		switches by using dynamic link aggregation. You can create multiple link aggregation groups 		(LAGs) on a distributed switch to aggregate the bandwidth of physical NICs on ESXi hosts 		that are connected to LACP port channels. " data-scope="local" data-format="dita" data-type="concept" target="_self"><span class="linktext"><div  style="display: inline;">LACP Support on a vSphere Distributed Switch</div></span></a><a class="link" href="/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0/networking-backup-and-restore.html" title="vSphere enables 	 you to backup and restore the configuration of a vSphere Distributed Switch , 	 distributed and uplink port groups in cases of invalid changes or a transfer to 	 another deployment.    " data-scope="local" data-format="dita" data-type="concept" target="_self"><span class="linktext"><div  style="display: inline;">Backing Up and Restoring Networking Configurations</div></span></a><a class="link" href="/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0/network-rollback-and-recovery.html" title="You can prevent 	 and recover from misconfiguration of the management network by using the 	 rollback and recovery support of the vSphere Distributed Switch and vSphere 	 Standard Switch.    " data-scope="local" data-format="dita" data-type="concept" target="_self"><span class="linktext"><div  style="display: inline;">Rollback and Recovery of the Management Network</div></span></a><a class="link" href="/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0/networking-policies.html" title="Policies set at 	 the standard switch or distributed port group level apply to all of the port 	 groups on the standard switch or to ports in the distributed port group. The 	 exceptions are the configuration options that are overridden at the standard 	 port group or distributed port level.    " data-scope="local" data-format="dita" data-type="concept" target="_self"><span class="linktext"><div  style="display: inline;">Networking Policies</div></span></a><a class="link" href="/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0/isolate-network-traffic-by-using-vlans.html" title="VLANs let you 	 segment a network into multiple logical broadcast domains at Layer 2 of the 	 network protocol stack.    " data-scope="local" data-format="dita" data-type="concept" target="_self"><span class="linktext"><div  style="display: inline;">Isolating Network Traffic by Using VLANs</div></span></a><a class="link" href="/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0/managing-network-resources.html" title="vSphere provides several different methods to help you manage your network resources." data-scope="local" data-format="dita" data-type="concept" target="_self"><span class="linktext"><div  style="display: inline;">Managing Network Resources</div></span></a><a class="link" href="/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0/network-io-control.html" title="Use vSphere 	 Network I/O Control to allocate network bandwidth to business-critical 	 applications and to resolve situations where several types of traffic compete 	 for common resources.    " data-scope="local" data-format="dita" data-type="concept" target="_self"><span class="linktext"><div  style="display: inline;">vSphere Network I/O Control</div></span></a><a class="link" href="/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0/mac-addresses.html" title="MAC addresses are 	 used in the Layer 2 (Data Link Layer) of the network protocol stack to transmit 	 frames to a recipient. In vSphere,  	 vCenter Server 	 generates MAC addresses for virtual machine adapters and VMkernel adapters, or 	 you can assign addresses manually.    " data-scope="local" data-format="dita" data-type="concept" target="_self"><span class="linktext"><div  style="display: inline;">MAC Address Management</div></span></a><a class="link" href="/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0/configuring-vsphere-for-an-ipv6-environment.html" title="Configure  	 ESXi hosts and  	 vCenter Server 	 for operation in a pure IPv6 environment for larger address space and improved 	 address assignment.    " data-scope="local" data-format="dita" data-type="concept" target="_self"><span class="linktext"><div  style="display: inline;">Configuring vSphere for IPv6</div></span></a><a class="link" href="/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0/monitoring-network-packets.html" title="Monitor network 	 connection and packets that pass through the ports of a vSphere Standard Switch 	 or a vSphere Distributed Switch to analyze the traffic between virtual machines 	 and hosts.    " data-scope="local" data-format="dita" data-type="concept" target="_self"><span class="linktext"><div  style="display: inline;">Monitoring Network Connection and Traffic</div></span></a><a class="link" href="/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0/configuring-virtual-machine-and-vmkernel-networking-by-using-protocol-profiles.html" title="A network protocol 	 profile contains a pool of IPv4 and IPv6 addresses that  	 vCenter Server 	 assigns to vApps or to virtual machines with vApp functionality that are 	 connected to port groups associated with the profile.    " data-scope="local" data-format="dita" data-type="concept" target="_self"><span class="linktext"><div  style="display: inline;">Configuring Protocol Profiles for Virtual Machine Networking</div></span></a><a class="link" href="/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0/multicast-filtering.html" title="In vSphere 6.0 and 	 later, vSphere Distributed Switch supports basic and snooping models for 	 filtering of multicast packets that are related to individual multicast groups. 	 Choose a model according to the number of multicast groups to which the virtual 	 machines on the switch subscribe.    " data-scope="local" data-format="dita" data-type="concept" target="_self"><span class="linktext"><div  style="display: inline;">Multicast Filtering</div></span></a><a class="link" href="/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0/stateless-network-deployment.html" title="Stateless is a 	 mode of execution for  	 ESXi hosts with 	 no local storage that formerly would save configuration or state. 	 Configurations are abstracted into a host profile, which is a template that 	 applies to a class of machines. Stateless allows easy replacement, removal, and 	 addition of failed hardware, and improves the ease of scaling a hardware 	 deployment.    " data-scope="local" data-format="dita" data-type="concept" target="_self"><span class="linktext"><div  style="display: inline;">What is Stateless Network Deployment</div></span></a><a class="link" href="/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0/networking-best-practices.html" title="Consider these 	 best practices when you configure your network.    " data-scope="local" data-format="dita" data-type="concept" target="_self"><span class="linktext"><div  style="display: inline;">Networking Best Practices</div></span></a><a class="link" href="/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-networking-7-0/troubleshooting-networking-configurations.html" title="The 	 troubleshooting topics about networking in vSphere provide solutions to 	 potential problems that you might encounter with the connectivity of  	 ESXi hosts,  	 vCenter Server 	 and virtual machines.    " data-scope="local" data-format="dita" data-type="concept" target="_self"><span class="linktext"><div  style="display: inline;">Troubleshooting Networking</div></span></a></div>
+</div>
+</div>
+</div>
+</div></div>
+
+
+</div>
+</div>
+
+</div>
+
+                        <!-- Topic Footer -->
+                        
+
+
+
+
+
+
+
+
+
+
+                        
+                            <div class="contact-us-section">
+                                <p><hr style="border: 1px solid rgba(0,0,0,0.1)"/> <p> <a style="color: #005c8a;" href="/us/en/user-feedback.html">Content feedback and comments</a> </p></p>
+                            </div>
+                        
+                     </div>
+                  </div>
+               </section>
+
+            </main>
+         </div>
+      </div>
+   </div>
+   <!-- Include Template Footer
+      
+
+
+<footer id="footer">
+  <a href="#">About</a>
+  <a href="#">Contact Us</a>
+</footer>
+
+      -->
+   <!-- Include Client Libraries
+      <link rel="stylesheet" href="/etc.clientlibs/fmdita/clientlibs/siteoutput/default/common.min.css" type="text/css"/>
+
+
+      <link rel="stylesheet" href="/etc.clientlibs/fmdita/clientlibs/siteoutput/default/topicpage.min.css" type="text/css"/>
+<script src="/etc.clientlibs/clientlibs/granite/jquery.min.js"></script>
+<script src="/etc.clientlibs/clientlibs/granite/utils.min.js"></script>
+<script src="/etc.clientlibs/aem-site-template-dxml/broadcom/techdocs2/granite/utils.min.js"></script>
+<script src="/etc.clientlibs/clientlibs/granite/jquery/granite.min.js"></script>
+<script src="/etc.clientlibs/aem-site-template-dxml/broadcom/techdocs2/granite/jquery/granite.min.js"></script>
+<script src="/etc.clientlibs/foundation/clientlibs/jquery.min.js"></script>
+<script src="/etc.clientlibs/fmdita/clientlibs/siteoutput/default/topicpage.min.js"></script>
+
+      <script src="/etc.clientlibs/fmdita/clientlibs/siteoutput/default/breadcrumbs.min.js"></script>
+
+      -->
+   <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+   <div class="footnode footer"><footer class="bc-angular-footer">
+	<div class="container">
+		<div class="row">
+			<section class="col-12 col-lg-8 footer-left px-0">
+				<div class="col-12 d-block d-sm-none">
+					<!-- // mobile social media icons here. -->
+					<ul class="list-inline social-icons">
+                     
+							
+							
+                            <li>
+
+							<a target="_blank" class="twitter" href="https://www.twitter.com/Broadcom" aria-label="twitter">
+								<i class="fab fa-twitter"></i>
+							</a>
+							</li>
+                            
+                            <li>
+
+							<a target="_blank" class="linkedin" href="https://www.linkedin.com/company/broadcom" aria-label="linkedin">
+								<i class="fab fa-linkedin"></i>
+							</a>
+							</li>
+                            
+                            <li>
+
+							<a target="_blank" class="youtube" href="https://www.youtube.com/c/broadcom" aria-label="youtube">
+								<i class="fab fa-youtube"></i>
+							</a>
+							</li>
+                            
+                            
+                            
+
+					</ul>
+				</div>
+				<div class="col-12 footer-list-wrap">
+					<div class="nav-list-wrap">
+						<ul class="list-inline footer-nav-list">
+                            
+							
+							
+                            <li>
+								<a href="https://www.broadcom.com/products/">Products</a>
+							</li>
+                            
+                            <li>
+								<a href="https://www.broadcom.com/solutions/">Solutions</a>
+							</li>
+                            
+                            <li>
+								<a href="https://www.broadcom.com/support/">Support and Services</a>
+							</li>
+                            
+                            <li>
+								<a href="https://www.broadcom.com/company/">Company</a>
+							</li>
+                            
+                            <li>
+								<a href="https://www.broadcom.com/how-to-buy/">How To Buy</a>
+							</li>
+                            
+                            
+                            
+						</ul>
+					</div>
+					<div class="col-12 copyright-text" tabindex="0">
+
+					
+							
+								Copyright © 2005-2025 Broadcom. All Rights Reserved. The term “Broadcom” refers to Broadcom Inc. and/or its subsidiaries.
+                            
+
+                    </div>
+					<div class="footer-policies-wrap">
+						<ul class="list-inline policies-list">
+                        
+							
+							
+                            <li>
+								<a href="https://www.broadcom.com/company/legal/privacy-policy">Privacy</a>
+							</li>
+                            
+                            <li>
+								<a href="https://www.broadcom.com/company/citizenship/supplier-responsibility">Supplier Responsibility</a>
+							</li>
+                            
+                            <li>
+								<a href="https://www.broadcom.com/company/legal/terms-of-use/">Terms of Use</a>
+							</li>
+                            
+                            <li>
+								<a href="https://www.broadcom.com/sitemap">Sitemap</a>
+							</li>
+                            
+                            
+                            
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section class="col-12 col-lg-4 footer-right">
+				<div class="d-none d-sm-block">
+					<!-- // tablet and desktop social media icons here -->
+					<ul class="list-inline social-icons">
+                    	    
+							
+							
+                            <li>
+
+							<a target="_blank" class="twitter" href="https://www.twitter.com/Broadcom" aria-label="twitter">
+								<i class="fab fa-twitter"></i>
+							</a>
+							</li>
+                            
+                            <li>
+
+							<a target="_blank" class="linkedin" href="https://www.linkedin.com/company/broadcom" aria-label="linkedin">
+								<i class="fab fa-linkedin"></i>
+							</a>
+							</li>
+                            
+                            <li>
+
+							<a target="_blank" class="youtube" href="https://www.youtube.com/c/broadcom" aria-label="youtube">
+								<i class="fab fa-youtube"></i>
+							</a>
+							</li>
+                            
+                            
+                            
+
+					</ul>
+				</div>
+			</section>
+		</div>
+	</div>
+</footer></div>
+
+   <div class="swagger-field d-none">
+      <div class="swagger swagger-ui parbase">
+	
+
+
+</div>
+
+   </div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'942282e00ebc403c',t:'MTc0NzY0NjM1MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

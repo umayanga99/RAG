@@ -1,0 +1,64 @@
+vSphere Virtual Machine Administration
+VMware vSphere 8.0
+PDF
+Version
+8.0
+7.0
+6.7
+6.5
+Language
+简体中文
+Deutsch
+Español
+Français
+Italiano
+日本語
+한국어
+繁體中文
+English
+Open/Close Topics Navigation
+Product Menu
+Topics
+vSphere Virtual Machine Administration
+vSphere Virtual Machine Administration
+describes how to create, configure, and manage virtual machines in the VMware vSphere
+®
+environment.
+At VMware, we value inclusion. To foster this principle within our customer, partner, and internal community, we have updated this guide to remove instances of non-inclusive language.
+This guide provides introductions to the tasks that you can perform within the system and also cross-references to the documentation that describes the tasks in detail.
+This information focuses on managing virtual machines and includes the following information.
+Creating and deploying virtual machines, templates, and clones
+Deploying OVF templates
+Using content libraries to manage templates and other library items
+Configuring virtual machine hardware and virtual machine options
+Managing multi-tiered applications with VMware vSphere vApp
+Monitoring solutions with the vCenter Solutions Manager
+Managing virtual machines, including using snapshots
+Upgrading virtual machines
+Troubleshooting virtual machines
+vSphere Virtual Machine Administration
+covers VMware
+ESXi
+™
+and VMware
+vCenter Server
+®
+.
+Intended Audience
+This information is written for experienced Windows or Linux system administrators who are familiar with virtualization.
+Updated Information
+Introduction to VMware vSphere Virtual Machines
+Deploying Virtual Machines
+Deploy and Export OVF and OVA Templates
+Using Content Libraries
+Configuring Virtual Machine Hardware
+Configuring Virtual Machine Options
+Configure Virtual Machine Advanced File Parameters
+Managing Multi-Tiered Applications with vSphere vApp
+Monitoring Solutions with the vCenter Solutions Manager
+Managing Virtual Machines
+How do I Upgrade Virtual Machines
+Required vCenter Server Privileges for Common Tasks
+Troubleshooting Overview
+Troubleshooting Virtual Machines
+Content feedback and comments
