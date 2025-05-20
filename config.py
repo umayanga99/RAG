@@ -16,8 +16,8 @@ class Settings(BaseSettings):
     DOWNLOAD_DOC_DIR: str = "download-dir"
     OLLAMA_HOST: str = "localhost"
     OLLAMA_PORT: int = 11434
-    # OLLAMA_LLM_MODEL: str = "deepseek-r1:14b"
-    OLLAMA_LLM_MODEL: str = "llama2"
+    OLLAMA_LLM_MODEL: str = "deepseek-r1:14b"
+    # OLLAMA_LLM_MODEL: str = "llama2"
     OLLAMA_EMBED_MODEL: str = "bge-m3"
     OLLAMA_VLM_MODEL: str = "llava"
 
