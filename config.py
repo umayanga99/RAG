@@ -3,10 +3,10 @@ from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-    NEO4J_URI: str = "neo4j+s://e344c9f9.databases.neo4j.io"
+    NEO4J_URI: str = "neo4j+s://<id>.databases.neo4j.io"
     NEO4J_USERNAME: str = "neo4j"
-    NEO4J_PASSWORD: str = "3J1wGcs4zyA-UxT4HVPMqkNCZStwIdhy9NIVGRtltfY"
-    AURA_INSTANCEID: str = "e344c9f9"
+    NEO4J_PASSWORD: str = "..."
+    AURA_INSTANCEID: str = "<id>"
     AURA_INSTANCENAME: str ="Instance02"
     REDIS_HOST: str = "localhost"
     REDIS_PORT: int = 6379
